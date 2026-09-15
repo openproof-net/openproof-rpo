@@ -1,1 +1,14 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenProof — documentation has moved</title><link rel="canonical" href="https://openproof.net/docs/demo-legal.html"><meta http-equiv="refresh" content="0;url=https://openproof.net/docs/demo-legal.html"><script>const target=new URL("https://openproof.net/docs/demo-legal.html");target.search=location.search;target.hash=location.hash;location.replace(target.href);</script><style>body{margin:0;background:#071015;color:#f0ede5;font:18px/1.7 Arial,sans-serif}main{max-width:680px;margin:15vh auto;padding:30px;border-top:1px solid #c3a06c}a{color:#d3b078}small{color:#a7b4b4}</style></head><body><main><small>OPENPROOF · BY TRUTHX</small><h1>One project. One home.</h1><p>This page is now part of the unified OpenProof site.</p><p>Cette page rejoint le site unique OpenProof.</p><a href="https://openproof.net/docs/demo-legal.html">Continue to OpenProof / Continuer vers OpenProof →</a></main></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,follow"><title>OpenProof documentation — new address</title><link rel="canonical" href="https://openproof.net/docs/examples.html"><noscript><meta http-equiv="refresh" content="0;url=https://openproof.net/docs/examples.html"></noscript><script>const destinations={"en":"/docs/examples.html","fr":"/docs/fr/examples.html"},anchors={"en":["main","situation","copyDemoJson","demoJson"],"fr":["main","situation","copyDemoJson","demoJson"]};
+const source=new URLSearchParams(location.search);
+const languages=source.getAll('lang');
+const language=languages.length===1&&['en','fr'].includes(languages[0])?languages[0]:"en";
+const target=new URL(destinations[language],'https://openproof.net');
+let invalid=false;
+for(const key of ['interest','intent','offer','catalog','utm_source','utm_medium','utm_campaign','utm_content','utm_term']){
+ const values=source.getAll(key);
+ if(values.length===1&&values[0].length<=160&&!/[\x00-\x1f\x7f]/.test(values[0]))target.searchParams.set(key,values[0]);
+ else if(values.length&&['intent','offer','catalog'].includes(key))invalid=true;
+}
+if(invalid||source.getAll('selection_invalid').includes('1'))target.searchParams.set('selection_invalid','1');
+if(anchors[language].includes(location.hash.slice(1)))target.hash=location.hash;
+location.replace(target.href);</script><style>body{margin:0;background:#071015;color:#f0ede5;font:18px/1.7 Arial,sans-serif}main{max-width:680px;margin:15vh auto;padding:30px;border-top:1px solid #c3a06c}a{color:#d3b078;overflow-wrap:anywhere}small{color:#a7b4b4}</style></head><body><main><small>OPENPROOF · BY TRUTHX</small><h1>The documentation has moved to OpenProof.</h1><p>This historical address now leads to its corresponding reference page.</p><a href="https://openproof.net/docs/examples.html">Continue to OpenProof →</a></main></body></html>

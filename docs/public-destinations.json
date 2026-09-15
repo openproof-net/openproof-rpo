@@ -1,0 +1,772 @@
+[
+  {
+    "file": "docs/advanced-cockpit.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/case-brief.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/case-brief.html",
+      "fr": "/docs/fr/case-brief.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "questions",
+        "print-brief"
+      ],
+      "fr": [
+        "main",
+        "questions",
+        "print-brief"
+      ]
+    }
+  },
+  {
+    "file": "docs/cockpit-technical.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/cockpit.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/contexts.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/spec.html",
+      "fr": "/docs/fr/spec.html"
+    },
+    "anchors": {
+      "en": [
+        "main"
+      ],
+      "fr": [
+        "main"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-ai-governance.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-asterion-case.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-cnrs-legal-mvp.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-legal-mapping.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-legal.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/demo-psycho.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/examples.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/fr/examples.html",
+    "language": "fr",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/fr/gersende-de-parcey.html",
+    "language": "fr",
+    "targets": {
+      "en": "/gersende-ryard-de-parcey",
+      "fr": "/fr/gersende-ryard-de-parcey"
+    },
+    "anchors": {
+      "en": [],
+      "fr": []
+    }
+  },
+  {
+    "file": "docs/fr/index.html",
+    "language": "fr",
+    "targets": {
+      "en": "/docs/index.html",
+      "fr": "/docs/fr/index.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "definition-title",
+        "anatomy-title",
+        "flow-title",
+        "outcomes-title",
+        "paths-title"
+      ],
+      "fr": [
+        "main",
+        "definition-title",
+        "anatomy-title",
+        "flow-title",
+        "outcomes-title",
+        "paths-title"
+      ]
+    }
+  },
+  {
+    "file": "docs/fr/tests.html",
+    "language": "fr",
+    "targets": {
+      "en": "/docs/tests.html",
+      "fr": "/docs/fr/tests.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "laboratory",
+        "verificationState",
+        "syntaxResult",
+        "structureResult",
+        "matchResult",
+        "bytesResult",
+        "hashResult",
+        "referenceHash",
+        "simulationNote",
+        "rpoEditor",
+        "runVerification"
+      ],
+      "fr": [
+        "main",
+        "laboratory",
+        "verificationState",
+        "syntaxResult",
+        "structureResult",
+        "matchResult",
+        "bytesResult",
+        "hashResult",
+        "referenceHash",
+        "simulationNote",
+        "rpoEditor",
+        "runVerification"
+      ]
+    }
+  },
+  {
+    "file": "docs/fr/truthx-engine/index.html",
+    "language": "fr",
+    "targets": {
+      "en": "/docs/truthx-engine/index.html",
+      "fr": "/docs/fr/truthx-engine/index.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "overview",
+        "definition-title",
+        "modes",
+        "modes-title",
+        "tab-retrospective",
+        "tab-continuous",
+        "mode-retrospective",
+        "mode-continuous",
+        "controls",
+        "controls-title",
+        "cycle-title",
+        "architecture",
+        "architecture-title",
+        "integrations",
+        "integrations-title",
+        "applications",
+        "applications-title",
+        "landscape",
+        "landscape-title",
+        "pilot",
+        "pilot-title"
+      ],
+      "fr": [
+        "main",
+        "overview",
+        "definition-title",
+        "modes",
+        "modes-title",
+        "tab-retrospective",
+        "tab-continuous",
+        "mode-retrospective",
+        "mode-continuous",
+        "controls",
+        "controls-title",
+        "cycle-title",
+        "architecture",
+        "architecture-title",
+        "integrations",
+        "integrations-title",
+        "applications",
+        "applications-title",
+        "landscape",
+        "landscape-title",
+        "pilot",
+        "pilot-title"
+      ]
+    }
+  },
+  {
+    "file": "docs/gersende-de-parcey.html",
+    "language": "en",
+    "targets": {
+      "en": "/gersende-ryard-de-parcey",
+      "fr": "/fr/gersende-ryard-de-parcey"
+    },
+    "anchors": {
+      "en": [],
+      "fr": []
+    }
+  },
+  {
+    "file": "docs/how-it-works.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/walkthrough.html",
+      "fr": "/docs/fr/walkthrough.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "step-count",
+        "play-status",
+        "play",
+        "progress",
+        "sources-title",
+        "gap-title",
+        "review-title",
+        "record-title",
+        "verify-title",
+        "verify-status",
+        "reference-hash",
+        "current-hash",
+        "change-note",
+        "change",
+        "restore",
+        "previous",
+        "next",
+        "case-title"
+      ],
+      "fr": [
+        "main",
+        "step-count",
+        "play-status",
+        "play",
+        "progress",
+        "sources-title",
+        "gap-title",
+        "review-title",
+        "record-title",
+        "verify-title",
+        "verify-status",
+        "reference-hash",
+        "current-hash",
+        "change-note",
+        "change",
+        "restore",
+        "previous",
+        "next",
+        "case-title"
+      ]
+    }
+  },
+  {
+    "file": "docs/index.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/index.html",
+      "fr": "/docs/fr/index.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "definition-title",
+        "anatomy-title",
+        "flow-title",
+        "outcomes-title",
+        "paths-title"
+      ],
+      "fr": [
+        "main",
+        "definition-title",
+        "anatomy-title",
+        "flow-title",
+        "outcomes-title",
+        "paths-title"
+      ]
+    }
+  },
+  {
+    "file": "docs/legal/index.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/overview.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/spec.html",
+      "fr": "/docs/fr/spec.html"
+    },
+    "anchors": {
+      "en": [
+        "main"
+      ],
+      "fr": [
+        "main"
+      ]
+    }
+  },
+  {
+    "file": "docs/simulator-crisis.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/simulator-signal.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/simulator.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/examples.html",
+      "fr": "/docs/fr/examples.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ],
+      "fr": [
+        "main",
+        "situation",
+        "copyDemoJson",
+        "demoJson"
+      ]
+    }
+  },
+  {
+    "file": "docs/spec.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/spec.html",
+      "fr": "/docs/fr/spec.html"
+    },
+    "anchors": {
+      "en": [
+        "main"
+      ],
+      "fr": [
+        "main"
+      ]
+    }
+  },
+  {
+    "file": "docs/tests.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/tests.html",
+      "fr": "/docs/fr/tests.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "laboratory",
+        "verificationState",
+        "syntaxResult",
+        "structureResult",
+        "matchResult",
+        "bytesResult",
+        "hashResult",
+        "referenceHash",
+        "simulationNote",
+        "rpoEditor",
+        "runVerification"
+      ],
+      "fr": [
+        "main",
+        "laboratory",
+        "verificationState",
+        "syntaxResult",
+        "structureResult",
+        "matchResult",
+        "bytesResult",
+        "hashResult",
+        "referenceHash",
+        "simulationNote",
+        "rpoEditor",
+        "runVerification"
+      ]
+    }
+  },
+  {
+    "file": "docs/truthx-engine/index.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/truthx-engine/index.html",
+      "fr": "/docs/fr/truthx-engine/index.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "overview",
+        "definition-title",
+        "modes",
+        "modes-title",
+        "tab-retrospective",
+        "tab-continuous",
+        "mode-retrospective",
+        "mode-continuous",
+        "controls",
+        "controls-title",
+        "cycle-title",
+        "architecture",
+        "architecture-title",
+        "integrations",
+        "integrations-title",
+        "applications",
+        "applications-title",
+        "landscape",
+        "landscape-title",
+        "pilot",
+        "pilot-title"
+      ],
+      "fr": [
+        "main",
+        "overview",
+        "definition-title",
+        "modes",
+        "modes-title",
+        "tab-retrospective",
+        "tab-continuous",
+        "mode-retrospective",
+        "mode-continuous",
+        "controls",
+        "controls-title",
+        "cycle-title",
+        "architecture",
+        "architecture-title",
+        "integrations",
+        "integrations-title",
+        "applications",
+        "applications-title",
+        "landscape",
+        "landscape-title",
+        "pilot",
+        "pilot-title"
+      ]
+    }
+  },
+  {
+    "file": "docs/walkthrough.html",
+    "language": "en",
+    "targets": {
+      "en": "/docs/walkthrough.html",
+      "fr": "/docs/fr/walkthrough.html"
+    },
+    "anchors": {
+      "en": [
+        "main",
+        "step-count",
+        "play-status",
+        "play",
+        "progress",
+        "sources-title",
+        "gap-title",
+        "review-title",
+        "record-title",
+        "verify-title",
+        "verify-status",
+        "reference-hash",
+        "current-hash",
+        "change-note",
+        "change",
+        "restore",
+        "previous",
+        "next",
+        "case-title"
+      ],
+      "fr": [
+        "main",
+        "step-count",
+        "play-status",
+        "play",
+        "progress",
+        "sources-title",
+        "gap-title",
+        "review-title",
+        "record-title",
+        "verify-title",
+        "verify-status",
+        "reference-hash",
+        "current-hash",
+        "change-note",
+        "change",
+        "restore",
+        "previous",
+        "next",
+        "case-title"
+      ]
+    }
+  }
+]
