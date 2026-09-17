@@ -1,15 +1,15 @@
 # Contributing to OpenProof
 
-**Project lead: Gersende Ryard de Parcey.** Start at [Build OpenProof together](COMMUNITY.md) and [introduce your proposed contribution](https://github.com/openproof-net/rpo-spec-v0.1/issues/43).
+**Project lead: Gersende Ryard de Parcey. [Start with one claim — a suggested 15-minute review](https://github.com/openproof-net/rpo-spec-v0.1/issues/44).** No coding or installation is needed; a GitHub account is needed to reply. French and English are welcome. You may leave a first observation directly, without introducing yourself or reserving a task.
 
-The first challenge combines source reading, research/evaluation, report design and technical interface proposals. Read the [fictional Cedar pack](examples/community-cedar/README.md) and choose [one bounded task](COMMUNITY.md#first-tasks). These activities inform the existing Legal product; they do not require access to the private engine.
+The first challenge uses the [fictional cofounder case](examples/cofounders-review/README.md): shared decisions, disputed spending and conflicting evidence. A first review contains four short lines: supported wording, source IDs, an adverse or missing element and the next human review question. Choose [one bounded task](COMMUNITY.md#first-tasks); no private engine access is required. The [Cedar material](examples/community-cedar/README.md) remains available separately.
 
 The [five-minute Atlas exercise](START_HERE.md) remains available for an introduction to the public format and integrity checker.
 
 ## How your contribution moves forward
 
-1. Propose a task and a realistic scope in its issue; French and English are welcome.
-2. Gersende confirms its priority and coordinates contributors. Agree applicable rights before reusable material is incorporated.
+1. Post a first short, sourced observation directly in its issue. For a larger task or code change, propose a realistic scope before starting.
+2. Gersende reviews the observation or confirms the larger task's priority and coordinates contributors. Agree applicable rights before reusable material is incorporated.
 3. Submit a deliverable link, the version you examined, evidence and limits.
 4. Record review questions and revisions. Gersende makes acceptance decisions with appropriate specialist review; technical integration requires reproducible checks and a competent reviewer.
 5. Credit the contributor's accepted work and distinguish accepted feedback/design from a released product feature.
