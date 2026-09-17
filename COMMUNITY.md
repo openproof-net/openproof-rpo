@@ -1,10 +1,45 @@
 # Build OpenProof together
 
-**SOURCE TRACEABILITY · HUMAN REVIEW · OPEN COLLABORATION**
+A case can cite its sources and still leave part of the story out. In our fictional example, three cofounders fall out: shared decisions, disputed spending and conflicting evidence must remain open to review.
 
-**Help people turn a confusing dossier into a report they can check.** We are bringing together researchers, developers and documentary professionals to make sources, disagreements and unanswered questions easier to examine. Join a project with an existing research collaboration, a delivered prototype and concrete first tasks.
+**[Review one claim — suggested scope: 15 minutes →](https://github.com/openproof-net/rpo-spec-v0.1/issues/44)**
 
-**Project lead: [Gersende Ryard de Parcey](https://github.com/Gersenderdp), founder of TruthX / OpenProof.** Gersende leads the project, sets priorities and coordinates acceptance and releases.
+No coding, installation or introduction is needed. Read the sources freely; a GitHub account is needed only to reply. French and English are welcome. The time is indicative, not a measured completion time.
+
+## Your first contribution in four lines
+
+Read [S02](https://openproof.net/docs/case-brief.html#source-S02), [S03](https://openproof.net/docs/case-brief.html#source-S03) and [S04](https://openproof.net/docs/case-brief.html#source-S04). Challenge the deliberately unsupported claim in [#44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44), then leave:
+
+1. What the documents support.
+2. The source IDs supporting your wording.
+3. The adverse or missing element to preserve.
+4. The next question a human reviewer should examine.
+
+You can post this first observation directly. There is no need to reserve the task. For a larger deliverable or code change, agree scope and applicable rights first.
+
+## One shared challenge
+
+**Can another person check an observation and understand what remains unresolved?**
+
+The [cofounder review pack](examples/cofounders-review/README.md) contains five questions linked to eight fictional source excerpts. Its [provisional review guide](examples/cofounders-review/REVIEW_GUIDE.md) makes the expected distinctions and correction history examinable.
+
+The material was prepared with AI assistance for demonstration. It is not output from the production engine, an externally validated benchmark or a legal conclusion. Examine evidence that challenges the initial interpretation as well as evidence supporting it.
+
+## First tasks
+
+| Your perspective | Small first task | Expected contribution |
+| --- | --- | --- |
+| Research or professional document review | [15 min: review one claim — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) | Four lines with a proposed wording, source IDs, adverse evidence and an open question |
+| User experience | [30 min: find the source — #45](https://github.com/openproof-net/rpo-spec-v0.1/issues/45) | One annotated screen or sketch; up to three observed difficulties, or label it untested |
+| Development | [45–60 min: describe a citation check — #46](https://github.com/openproof-net/rpo-spec-v0.1/issues/46) | Existing ID, missing ID, and an existing reference that does not support the claim |
+
+The times are suggested scopes. For larger tasks, Gersende coordinates commitments to avoid duplicated work; no one is expected to build the whole product.
+
+The [Atlas integrity exercise](START_HERE.md) and [Cedar technical material](examples/community-cedar/README.md) remain available separately. None of these exercises is the complete Legal application.
+
+## Who coordinates the work?
+
+**Project lead: [Gersende Ryard de Parcey](https://github.com/Gersenderdp), founder of TruthX / OpenProof.** Gersende sets priorities and coordinates acceptance and releases. Follow her profile for the next review question and source-based corrections.
 
 **RESEARCH COLLABORATION SINCE 2025 · GREYC / UNIVERSITÉ DE CAEN NORMANDIE**
 
@@ -15,28 +50,6 @@ Gersende designed the initial thirteen-module architecture. Under Gaël Dias's a
 **A research foundation already exists. Help turn it into a clearer, more useful document review experience.** The student prototype's integration into the current engine remains to be done.
 
 [Meet the research team and see what was delivered](RESEARCH_COLLABORATION.md).
-
-## [Join the first contributor circle →](https://github.com/openproof-net/rpo-spec-v0.1/issues/43)
-
-Tell us which task interests you, what you could contribute and the time you can realistically offer. French and English are welcome. This invitation forms a new public contributor circle. Participation in its individual tasks is agreed separately from the existing research collaboration.
-
-## One shared challenge
-**Can another person check every observation in a short documentary report and understand what remains unresolved?**
-
-Start with the [Cedar document pack](examples/community-cedar/README.md): three invented documents, stable paragraph references and a [proposed review reference](examples/community-cedar/REVIEW_REFERENCE.md). The pack is ready to read without an installation, account or private engine. A GitHub account is needed to post a contribution.
-
-Legal is the first product application. This challenge concerns documentary review; it does not provide legal advice or establish legal validity. The material and review reference were prepared with AI assistance and have not yet been evaluated by external participants.
-
-## First tasks
-| Your perspective | Take a small task | Expected contribution |
-| --- | --- | --- |
-| Research or professional document review | [Review the observations — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) | Challenge a citation, inference or missing-evidence statement with an explicit reason |
-| User experience | [Make the report readable — #45](https://github.com/openproof-net/rpo-spec-v0.1/issues/45) | Propose a short report layout and describe observed or still-untested usability |
-| Development | [Specify citation checks — #46](https://github.com/openproof-net/rpo-spec-v0.1/issues/46) | Describe an interface and expected results for valid and invalid references |
-
-All three tasks start **available**. Comment before starting so Gersende can coordinate scope and avoid duplicated work. You may propose a smaller part of a task; there is no expectation to build the whole product.
-
-The [five-minute Atlas exercise](START_HERE.md) remains an introduction to record integrity. Cedar extends the public collaboration to source reading, evaluation and report design. Neither exercise is the complete Legal application.
 
 ## Responsibility and review
 - **Gersende is responsible for the project:** purpose, priorities, coordination, acceptance decisions and release decisions.
@@ -56,8 +69,9 @@ You can read the pack, discuss needs and propose evaluation or design improvemen
 For a task requiring private implementation, describe the need without private code. Gersende will decide the appropriate scope and named access after checking the applicable rights and confidentiality. No production access or real dossier is needed for the first challenge.
 
 ## Checkpoint: 30 September 2026
-We aim to agree a first set of bounded contributor commitments, review at least one external contribution and document one evaluation of the report. These are targets, not achieved participation or guaranteed delivery.
 
-Success means a useful contribution and evidence about the review experience. Visits and stars alone do not establish either.
+The campaign aims for five external trials, three reasoned reviews, one verified improvement and one qualified conversation about a concrete need. These are targets, not achieved results or guaranteed delivery.
 
-[Join the first contributor circle](https://github.com/openproof-net/rpo-spec-v0.1/issues/43) · [Contribution details](CONTRIBUTING.md)
+Count an external trial only when a person reports what they examined or tried; internal activity, bots, visits, stars and followers do not establish a trial. An improvement needs a linked change and a check of the original problem.
+
+[Review one claim now](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) · [Questions and orientation — #43](https://github.com/openproof-net/rpo-spec-v0.1/issues/43) · [Contribution details](CONTRIBUTING.md)
