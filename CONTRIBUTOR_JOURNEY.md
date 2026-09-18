@@ -3,7 +3,7 @@
 Help make document review inspectable: trace a statement to its source, preserve
 uncertainty and show how a correction changes the result.
 
-**Available now:** [review one claim in the fictional cofounder case — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44).
+**Available now:** [review one claim in the fictional cofounder case — #44](https://github.com/openproof-net/openproof-rpo/issues/44).
 No installation or coding is required. French and English are welcome. The
 suggested first scope is 15 minutes; tell us the time you actually spent.
 
