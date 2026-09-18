@@ -64,7 +64,7 @@ Gersende reviews new proposals during her project work; no automated monitoring 
 ## Public participation and code access
 You can read the pack, discuss needs and propose evaluation or design improvements now. The public repository currently provides a draft RPO format, an integrity checker and these collaboration materials.
 
-**The complete application and TruthX Engine remain private. A complete open-source engine release has not happened.** The existing licensing inconsistency still needs resolution; no new licence or rights assignment is introduced by this invitation. Agree applicable rights before incorporating reusable submitted code, datasets or documentation.
+**The complete application and TruthX Engine remain private. A complete open-source engine release has not happened.** The checker, selected specification files, fictional examples and supporting documentation have an explicit [MIT file scope](LICENSING.md). Confirm the rights and MIT submission for contributions to those files; agree rights separately for unlisted material. No copyright assignment or permission to publish real dossiers follows from this invitation.
 
 For a task requiring private implementation, describe the need without private code. Gersende will decide the appropriate scope and named access after checking the applicable rights and confidentiality. No production access or real dossier is needed for the first challenge.
 
