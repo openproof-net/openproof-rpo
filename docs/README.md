@@ -30,8 +30,8 @@ ___
 
 Try it in 10 seconds
 ```bash
-git clone https://github.com/openproof-net/rpo-spec-v0.1.git 
-cd rpo-spec-v0.1
+git clone https://github.com/openproof-net/openproof-rpo.git 
+cd openproof-rpo
 python tools/validate_rpo.py examples/rpo-example-001.json
 ```
 ___
