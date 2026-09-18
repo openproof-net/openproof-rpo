@@ -1,5 +1,7 @@
 # Build OpenProof together
 
+[Contributor journey](CONTRIBUTOR_JOURNEY.md): start with a fictional review, see how a useful proposal is handled, and explore a possible individually authorised private mission. The private stage is being prepared; no access is granted by this page.
+
 A case can cite its sources and still leave part of the story out. In our fictional example, three cofounders fall out: shared decisions, disputed spending and conflicting evidence must remain open to review.
 
 **[Review one claim — suggested scope: 15 minutes →](https://github.com/openproof-net/rpo-spec-v0.1/issues/44)**

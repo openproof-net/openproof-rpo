@@ -6,6 +6,8 @@ This repository contains the **draft RPO specification, fictional reference exam
 
 Read the [fictional cofounder case and five review questions](examples/cofounders-review/README.md). French and English are welcome. Leave one sourced observation directly in the issue; no introduction or task reservation is required for this first response. The suggested time is a scope, not a measured completion time.
 
+[See the contributor journey](CONTRIBUTOR_JOURNEY.md): first public review, a possible individually authorised private mission, and a reusable public improvement. Private access is not automatic; that next stage is being prepared.
+
 For the existing technical introduction, use the [public integrity exercise](START_HERE.md). All examples are fictional and manually prepared; they do not demonstrate automatic contradiction detection. A fingerprint checks a change against a retained reference, not the truth of a dossier.
 
 **SCATTERED DOCUMENTS · CONFLICTING CLAIMS · A DECISION TO JUSTIFY**
