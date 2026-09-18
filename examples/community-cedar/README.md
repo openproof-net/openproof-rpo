@@ -30,6 +30,6 @@ These three documents are the entire supplied pack. Dates and quantities are inv
 **P3.** This invoice does not state the quantities inspected or accepted.
 
 ## Join the work
-[Choose a first task](../../COMMUNITY.md#first-tasks) or [introduce your proposed contribution](https://github.com/openproof-net/rpo-spec-v0.1/issues/43). French and English contributions are welcome. No private engine access is needed to read or critique this pack.
+[Choose a first task](../../COMMUNITY.md#first-tasks) or [introduce your proposed contribution](https://github.com/openproof-net/openproof-rpo/issues/43). French and English contributions are welcome. No private engine access is needed to read or critique this pack.
 
 Retain the distinction between what a document says and what happened in the world. A difference between an order, a receipt and an invoice is a review question; it is not, by itself, proof of wrongdoing.
