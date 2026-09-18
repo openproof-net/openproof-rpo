@@ -45,4 +45,4 @@ Record an accepted correction with its issue/comment link, chosen credit, reason
 
 This initial row records the publication baseline only. Future reports must inspect the live issue rather than assume it remains unchanged.
 
-[First review — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) · [Contribution process](../../CONTRIBUTING.md)
+[First review — #44](https://github.com/openproof-net/openproof-rpo/issues/44) · [Contribution process](../../CONTRIBUTING.md)
