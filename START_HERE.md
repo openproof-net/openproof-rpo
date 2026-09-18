@@ -19,8 +19,8 @@ Ask yourself: **which source would you need before concluding that the test was 
 **From a terminal:** use Git and Node.js 22 or later. No package installation or API key is needed.
 
 ```sh
-git clone https://github.com/openproof-net/rpo-spec-v0.1.git
-cd rpo-spec-v0.1
+git clone https://github.com/openproof-net/openproof-rpo.git
+cd openproof-rpo
 node tools/verify-demo.cjs examples/public-demo/rpo-en.json examples/public-demo/rpo-en.sha256
 ```
 
@@ -39,7 +39,7 @@ Expected: `basic_structure_present: true`, `reference_matches: false`, exit code
 
 ## 3. Contribute one observation
 
-**[Report your first-use result](https://github.com/openproof-net/rpo-spec-v0.1/issues/new?template=first-use.md)**:
+**[Report your first-use result](https://github.com/openproof-net/openproof-rpo/issues/new?template=first-use.md)**:
 
 - Which route you tried and what happened.
 - Which part was difficult to understand or reproduce.
