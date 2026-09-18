@@ -9,7 +9,7 @@ The [five-minute Atlas exercise](START_HERE.md) remains available for an introdu
 ## How your contribution moves forward
 
 1. Post a first short, sourced observation directly in its issue. For a larger task or code change, propose a realistic scope before starting.
-2. Gersende reviews the observation or confirms the larger task's priority and coordinates contributors. Agree applicable rights before reusable material is incorporated.
+2. Gersende reviews the observation or confirms the larger task's priority and coordinates contributors. Check the [MIT file scope](LICENSING.md) and agree rights for material outside it before incorporation.
 3. Submit a deliverable link, the version you examined, evidence and limits.
 4. Record review questions and revisions. Gersende makes acceptance decisions with appropriate specialist review; technical integration requires reproducible checks and a competent reviewer.
 5. Credit the contributor's accepted work and distinguish accepted feedback/design from a released product feature.
@@ -32,7 +32,7 @@ Gersende Ryard de Parcey maintains this repository and the product direction. Op
 
 Public scope: the draft format, synthetic source packs, evaluation criteria, report design, interface proposals, checker, documentation and tests. Use invented material only: removing a name alone does not make a real case safe to publish. Keep feedback respectful and focused on the work.
 
-Before implementing a change, describe the problem and proposed result in an issue. **Licensing metadata is incomplete.** Agree applicable rights with the maintainer before submitting code intended for redistribution. These instructions neither assign contributor rights nor introduce a licence.
+Before implementing a change, describe the problem and proposed result in an issue. The files explicitly listed in [LICENSING.md](LICENSING.md) are under [MIT](LICENSE). For a contribution to those files, confirm in the pull request that you have the necessary rights and submit it under MIT; identify third-party material and its terms. New paths and unlisted material require an explicit scope decision. This policy does not assign copyright or retroactively license prior comments or private analyses.
 
 ## Before opening a pull request
 
@@ -45,6 +45,6 @@ Do not silently regenerate reference hashes to make a failing comparison pass. A
 
 Never submit personal dossiers, confidential source documents, tokens or credentials. The private TruthX engine and production deployment are outside this repository's public contribution scope.
 
-Licensing metadata is incomplete; see the README before proposing code for redistribution. No contributor rights assignment or new licensing terms are introduced here.
+See [LICENSING.md](LICENSING.md) before redistribution: the grant is limited to the listed public files. A private-case invitation, if separately agreed, does not permit publication of its documents, identities or analyses in GitHub issues or pull requests.
 
 For a private use case, use [case qualification](https://openproof.net/qualify?intent=case) without uploading evidence. For other enquiries, contact [Gersende](https://www.linkedin.com/in/gryard/).

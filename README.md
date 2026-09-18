@@ -145,4 +145,4 @@ For transformation or interim executive assignments, [contact Gersende](https://
 
 Maintained by **Gersende Ryard de Parcey**, founder of TruthX / OpenProof. Citation metadata is in [CITATION.cff](CITATION.cff).
 
-That metadata currently names MIT, but this repository has no accompanying LICENSE file. This update does not establish or change licensing terms. Clarify the applicable rights with the maintainer before redistribution or commercial integration; public access alone is not a complete open-source release.
+The public checker, selected specification files, fictional reference examples and supporting documentation are available under the [MIT License](LICENSE), within the exact file list in [LICENSING.md](LICENSING.md). Commercial reuse is permitted for those files under MIT. Other files retain their existing rights; research archives, the private application and engine, real dossiers, and linked visual assets are outside this grant. Citation metadata links to that scope instead of asserting a repository-wide licence.
