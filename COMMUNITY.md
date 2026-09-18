@@ -4,13 +4,13 @@
 
 A case can cite its sources and still leave part of the story out. In our fictional example, three cofounders fall out: shared decisions, disputed spending and conflicting evidence must remain open to review.
 
-**[Review one claim — suggested scope: 15 minutes →](https://github.com/openproof-net/rpo-spec-v0.1/issues/44)**
+**[Review one claim — suggested scope: 15 minutes →](https://github.com/openproof-net/openproof-rpo/issues/44)**
 
 No coding, installation or introduction is needed. Read the sources freely; a GitHub account is needed only to reply. French and English are welcome. The time is indicative, not a measured completion time.
 
 ## Your first contribution in four lines
 
-Read [S02](https://openproof.net/docs/case-brief.html#source-S02), [S03](https://openproof.net/docs/case-brief.html#source-S03) and [S04](https://openproof.net/docs/case-brief.html#source-S04). Challenge the deliberately unsupported claim in [#44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44), then leave:
+Read [S02](https://openproof.net/docs/case-brief.html#source-S02), [S03](https://openproof.net/docs/case-brief.html#source-S03) and [S04](https://openproof.net/docs/case-brief.html#source-S04). Challenge the deliberately unsupported claim in [#44](https://github.com/openproof-net/openproof-rpo/issues/44), then leave:
 
 1. What the documents support.
 2. The source IDs supporting your wording.
@@ -31,9 +31,9 @@ The material was prepared with AI assistance for demonstration. It is not output
 
 | Your perspective | Small first task | Expected contribution |
 | --- | --- | --- |
-| Research or professional document review | [15 min: review one claim — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) | Four lines with a proposed wording, source IDs, adverse evidence and an open question |
-| User experience | [30 min: find the source — #45](https://github.com/openproof-net/rpo-spec-v0.1/issues/45) | One annotated screen or sketch; up to three observed difficulties, or label it untested |
-| Development | [45–60 min: describe a citation check — #46](https://github.com/openproof-net/rpo-spec-v0.1/issues/46) | Existing ID, missing ID, and an existing reference that does not support the claim |
+| Research or professional document review | [15 min: review one claim — #44](https://github.com/openproof-net/openproof-rpo/issues/44) | Four lines with a proposed wording, source IDs, adverse evidence and an open question |
+| User experience | [30 min: find the source — #45](https://github.com/openproof-net/openproof-rpo/issues/45) | One annotated screen or sketch; up to three observed difficulties, or label it untested |
+| Development | [45–60 min: describe a citation check — #46](https://github.com/openproof-net/openproof-rpo/issues/46) | Existing ID, missing ID, and an existing reference that does not support the claim |
 
 The times are suggested scopes. For larger tasks, Gersende coordinates commitments to avoid duplicated work; no one is expected to build the whole product.
 
@@ -76,4 +76,4 @@ The campaign aims for five external trials, three reasoned reviews, one verified
 
 Count an external trial only when a person reports what they examined or tried; internal activity, bots, visits, stars and followers do not establish a trial. An improvement needs a linked change and a check of the original problem.
 
-[Review one claim now](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) · [Questions and orientation — #43](https://github.com/openproof-net/rpo-spec-v0.1/issues/43) · [Contribution details](CONTRIBUTING.md)
+[Review one claim now](https://github.com/openproof-net/openproof-rpo/issues/44) · [Questions and orientation — #43](https://github.com/openproof-net/openproof-rpo/issues/43) · [Contribution details](CONTRIBUTING.md)
