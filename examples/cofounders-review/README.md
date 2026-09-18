@@ -2,7 +2,7 @@
 
 Three people build a business together. After their relationship breaks down, one faces a €480,000 claim. Shared decisions, a budget overrun, a late warning, lost customers and an incomplete handover must be examined separately.
 
-**[Start with question 1 — a suggested 15-minute review, no coding required →](https://github.com/openproof-net/rpo-spec-v0.1/issues/44)**
+**[Start with question 1 — a suggested 15-minute review, no coding required →](https://github.com/openproof-net/openproof-rpo/issues/44)**
 
 Read freely without installation. A GitHub account is needed to reply. French and English are welcome; an introduction or task reservation is not required for a first observation.
 
@@ -38,7 +38,7 @@ The first task covers question 1. You can examine another question in the same t
 3. **Adverse or missing element:** what must remain visible, including what challenges the founder's account?
 4. **Next review question:** what should a human examine next?
 
-[Post your observation in #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44). Use only the fictional material. For a larger deliverable, dataset or code change, agree scope and applicable rights first.
+[Post your observation in #44](https://github.com/openproof-net/openproof-rpo/issues/44). Use only the fictional material. For a larger deliverable, dataset or code change, agree scope and applicable rights first.
 
 ## Keep the wider context open
 
@@ -50,6 +50,6 @@ A document's presence, its reference ID, what its text supports and a profession
 
 Gersende records whether it is accepted, needs revision or remains unresolved, with a reason. Accepted contributions are credited under the contributor's chosen public name or handle. A retained correction links to the resulting change; accepting an observation is not evidence of a released engine feature. No fixed response deadline is promised.
 
-[Improve the reading path — #45](https://github.com/openproof-net/rpo-spec-v0.1/issues/45) · [Describe citation checks — #46](https://github.com/openproof-net/rpo-spec-v0.1/issues/46) · [Scope and rights](../../CONTRIBUTING.md)
+[Improve the reading path — #45](https://github.com/openproof-net/openproof-rpo/issues/45) · [Describe citation checks — #46](https://github.com/openproof-net/openproof-rpo/issues/46) · [Scope and rights](../../CONTRIBUTING.md)
 
 The [Cedar exercise](../community-cedar/README.md) and [Atlas integrity introduction](../../START_HERE.md) remain separate technical resources.

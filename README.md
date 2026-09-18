@@ -2,7 +2,7 @@
 
 This repository contains the **draft RPO specification, fictional reference examples and the supported local integrity checker**. It is not the hosted OpenProof Legal application or the private TruthX Engine. The public format remains **version 0.1**; the permanent repository name and the format version are separate concerns. No certification, recognised-standard status or external adoption is asserted.
 
-**[Start with one claim — a 15-minute review, no coding required](https://github.com/openproof-net/rpo-spec-v0.1/issues/44).** Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
+**[Start with one claim — a 15-minute review, no coding required](https://github.com/openproof-net/openproof-rpo/issues/44).** Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
 
 Read the [fictional cofounder case and five review questions](examples/cofounders-review/README.md). French and English are welcome. Leave one sourced observation directly in the issue; no introduction or task reservation is required for this first response. The suggested time is a scope, not a measured completion time.
 
@@ -43,7 +43,7 @@ OpenProof Legal is being piloted for people who examine and hand over complex do
 
 **SOURCE TRACEABILITY · HUMAN REVIEW · OPEN COLLABORATION**
 
-Gersende leads the project and is forming its first circle of researchers, developers and documentary professionals. Start with [one claim in the cofounder case](https://github.com/openproof-net/rpo-spec-v0.1/issues/44), then help evaluate the inference, improve report readability or specify citation checks. Each task has a bounded deliverable; no coding is required for a first review.
+Gersende leads the project and is forming its first circle of researchers, developers and documentary professionals. Start with [one claim in the cofounder case](https://github.com/openproof-net/openproof-rpo/issues/44), then help evaluate the inference, improve report readability or specify citation checks. Each task has a bounded deliverable; no coding is required for a first review.
 
 [Join the shared challenge](COMMUNITY.md) · [Try the five-minute integrity exercise](START_HERE.md) · [What is available](#what-is-available-today)
 
@@ -71,7 +71,7 @@ The fictional record and local JSON comparison below are available. The public c
 
 | Your question | Where to go |
 | --- | --- |
-| How can I help in 15 minutes? | [Review one claim in the cofounder case — #44](https://github.com/openproof-net/rpo-spec-v0.1/issues/44) |
+| How can I help in 15 minutes? | [Review one claim in the cofounder case — #44](https://github.com/openproof-net/openproof-rpo/issues/44) |
 | What does a record look like? | [Read the fictional Atlas case](examples/public-demo/README.md) |
 | Can I reproduce the integrity check? | Run the local example below |
 | What are the technical boundaries? | [Architecture and limitations](docs/architecture.md) |
@@ -84,8 +84,8 @@ The fictional record and local JSON comparison below are available. The public c
 Requires Node.js 22 or later and Git. No package installation, API key, account or engine access is needed.
 
 ```sh
-git clone https://github.com/openproof-net/rpo-spec-v0.1.git
-cd rpo-spec-v0.1
+git clone https://github.com/openproof-net/openproof-rpo.git
+cd openproof-rpo
 node tools/verify-demo.cjs examples/public-demo/rpo-en.json examples/public-demo/rpo-en.sha256
 node --test tests/public-verification.test.cjs
 ```
@@ -130,7 +130,7 @@ The `backend/`, `examples/cnrs-legal-mvp/`, `examples/example-minimal/`, `README
 
 The [first collaborative challenge](COMMUNITY.md) starts with the fictional cofounder case: eight written excerpts, five review questions and visible unanswered questions. The [provisional review guide](examples/cofounders-review/REVIEW_GUIDE.md) is available for critique; it is not product-generated, externally validated or a legal verdict. The [Cedar material](examples/community-cedar/README.md) remains a separate technical exercise.
 
-Researchers and practitioners can [challenge its observations](https://github.com/openproof-net/rpo-spec-v0.1/issues/44), readers can [improve the report layout](https://github.com/openproof-net/rpo-spec-v0.1/issues/45), and developers can [specify citation checks](https://github.com/openproof-net/rpo-spec-v0.1/issues/46). Gersende is responsible for priorities, coordination and acceptance; specialist reviewers are confirmed for defined tasks.
+Researchers and practitioners can [challenge its observations](https://github.com/openproof-net/openproof-rpo/issues/44), readers can [improve the report layout](https://github.com/openproof-net/openproof-rpo/issues/45), and developers can [specify citation checks](https://github.com/openproof-net/openproof-rpo/issues/46). Gersende is responsible for priorities, coordination and acceptance; specialist reviewers are confirmed for defined tasks.
 
 This public work informs the existing Legal product. It does not start a replacement engine. The community invitation is published, but external participation, a complete open-source release and improved product performance are not yet established. See [contribution scope and rights](CONTRIBUTING.md).
 

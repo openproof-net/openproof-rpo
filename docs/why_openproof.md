@@ -107,7 +107,7 @@ OpenProof can support decision defensibility in domains such as:
 ## Resources
 
 Specification  
-https://github.com/openproof-net/rpo-spec-v0.1
+https://github.com/openproof-net/openproof-rpo
 
 Reference implementation  
 https://github.com/Gersenderdp/rpo-reference

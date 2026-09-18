@@ -10,7 +10,7 @@ authors:
 
 date-released: 2026
 
-repository-code: https://github.com/openproof-net/rpo-spec-v0.1
+repository-code: https://github.com/openproof-net/openproof-rpo
 url: https://openproof.net
 
 abstract: >
@@ -18,4 +18,4 @@ abstract: >
   evidential bundle designed to preserve the structure of reasoning behind
   institutional decisions.
 
-license-url: "https://github.com/openproof-net/rpo-spec-v0.1/blob/main/LICENSING.md"
+license-url: "https://github.com/openproof-net/openproof-rpo/blob/main/LICENSING.md"
