@@ -13,6 +13,7 @@ not extend it to other files:
 CITATION.cff
 COMMUNITY.md
 CONTRIBUTING.md
+CONTRIBUTOR_JOURNEY.md
 LICENSE
 LICENSING.md
 README.md
