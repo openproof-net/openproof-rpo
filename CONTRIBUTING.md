@@ -1,6 +1,6 @@
 # Contributing to OpenProof
 
-**Project lead: Gersende Ryard de Parcey. [Start with one claim — a suggested 15-minute review](https://github.com/openproof-net/rpo-spec-v0.1/issues/44).** No coding or installation is needed; a GitHub account is needed to reply. French and English are welcome. You may leave a first observation directly, without introducing yourself or reserving a task.
+**Project lead: Gersende Ryard de Parcey. [Start with one claim — a suggested 15-minute review](https://github.com/openproof-net/openproof-rpo/issues/44).** No coding or installation is needed; a GitHub account is needed to reply. French and English are welcome. You may leave a first observation directly, without introducing yourself or reserving a task.
 
 The first challenge uses the [fictional cofounder case](examples/cofounders-review/README.md): shared decisions, disputed spending and conflicting evidence. A first review contains four short lines: supported wording, source IDs, an adverse or missing element and the next human review question. Choose [one bounded task](COMMUNITY.md#first-tasks); no private engine access is required. The [Cedar material](examples/community-cedar/README.md) remains available separately.
 
@@ -20,9 +20,9 @@ Task states: available → proposed → in review → accepted. No external part
 
 | Contribution | Include | Submit |
 | --- | --- | --- |
-| First-use feedback | What you tried, where you stopped, one useful next step | [First-use report](https://github.com/openproof-net/rpo-spec-v0.1/issues/new?template=first-use.md) |
-| Verification bug | Public version, command, synthetic input, expected and observed output | [Reproducible bug](https://github.com/openproof-net/rpo-spec-v0.1/issues/new?template=verification-bug.md) |
-| Fictional scenario | A claim, conflicting references, an unresolved question and an observable acceptance check | [Synthetic scenario](https://github.com/openproof-net/rpo-spec-v0.1/issues/new?template=synthetic-scenario.md) |
+| First-use feedback | What you tried, where you stopped, one useful next step | [First-use report](https://github.com/openproof-net/openproof-rpo/issues/new?template=first-use.md) |
+| Verification bug | Public version, command, synthetic input, expected and observed output | [Reproducible bug](https://github.com/openproof-net/openproof-rpo/issues/new?template=verification-bug.md) |
+| Fictional scenario | A claim, conflicting references, an unresolved question and an observable acceptance check | [Synthetic scenario](https://github.com/openproof-net/openproof-rpo/issues/new?template=synthetic-scenario.md) |
 
 No coding is required for feedback or a scenario. A GitHub account is required to post an issue. Check existing issues first.
 
