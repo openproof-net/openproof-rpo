@@ -2,7 +2,7 @@
 
 This repository contains the **draft RPO specification, fictional reference examples and the supported local integrity checker**. It is not the hosted OpenProof Legal application or the private TruthX Engine. The public format remains **version 0.1**; the permanent repository name and the format version are separate concerns. No certification, recognised-standard status or external adoption is asserted.
 
-**[Start in the interactive map — a guided 15-minute review, no coding required](https://app.openproof.net/contribute?lang=en).** [Version française](https://app.openproof.net/contribute?lang=fr). Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
+**[Start in the Investigation module — a guided 15-minute interactive review, no coding required](https://app.openproof.net/contribute?lang=en).** [Version française](https://app.openproof.net/contribute?lang=fr). You are testing one OpenProof module: the read-only Investigation workspace and its interactive map, not the complete product. Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
 
 The map guides you through S02, S03 and S04 and prepares a four-part review. **GitHub #44 is the publication step, not the starting step.** After the exercise prepares your text, publish it in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want it reviewed publicly. No introduction or task reservation is required.
 
