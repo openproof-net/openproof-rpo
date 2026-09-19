@@ -1,6 +1,6 @@
 # Contributing to OpenProof
 
-**Project lead: Gersende Ryard de Parcey. [Start with one claim — a suggested 15-minute review](https://github.com/openproof-net/openproof-rpo/issues/44).** No coding or installation is needed; a GitHub account is needed to reply. French and English are welcome. You may leave a first observation directly, without introducing yourself or reserving a task.
+**Project lead: Gersende Ryard de Parcey. [Start with the guided 15-minute interactive review](https://app.openproof.net/contribute?lang=en)** ([français](https://app.openproof.net/contribute?lang=fr)). No coding or installation is needed. The exercise prepares a four-part return; a GitHub account is needed only if you choose to publish that return in [#44](https://github.com/openproof-net/openproof-rpo/issues/44).
 
 The first challenge uses the [fictional cofounder case](examples/cofounders-review/README.md): shared decisions, disputed spending and conflicting evidence. A first review contains four short lines: supported wording, source IDs, an adverse or missing element and the next human review question. Choose [one bounded task](COMMUNITY.md#first-tasks); no private engine access is required. The [Cedar material](examples/community-cedar/README.md) remains available separately.
 
@@ -8,7 +8,7 @@ The [five-minute Atlas exercise](START_HERE.md) remains available for an introdu
 
 ## How your contribution moves forward
 
-1. Post a first short, sourced observation directly in its issue. For a larger task or code change, propose a realistic scope before starting.
+1. For the first review, use the guided interactive exercise, prepare the four-part return, then post it in the linked issue if you want public review. For a larger task or code change, propose a realistic scope before starting.
 2. Gersende reviews the observation or confirms the larger task's priority and coordinates contributors. Check the [MIT file scope](LICENSING.md) and agree rights for material outside it before incorporation.
 3. Submit a deliverable link, the version you examined, evidence and limits.
 4. Record review questions and revisions. Gersende makes acceptance decisions with appropriate specialist review; technical integration requires reproducible checks and a competent reviewer.

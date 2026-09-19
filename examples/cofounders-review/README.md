@@ -2,9 +2,9 @@
 
 Three people build a business together. After their relationship breaks down, one faces a €480,000 claim. Shared decisions, a budget overrun, a late warning, lost customers and an incomplete handover must be examined separately.
 
-**[Start with question 1 — a suggested 15-minute review, no coding required →](https://github.com/openproof-net/openproof-rpo/issues/44)**
+**[Start with question 1 in the guided interactive map — suggested 15 minutes →](https://app.openproof.net/contribute?lang=en)** · [Français](https://app.openproof.net/contribute?lang=fr)
 
-Read freely without installation. A GitHub account is needed to reply. French and English are welcome; an introduction or task reservation is not required for a first observation.
+The exercise starts at S02, guides you through S03 and S04, and prepares the four-part response. No coding or installation is needed. A GitHub account is required only if you choose to publish the prepared response in [#44](https://github.com/openproof-net/openproof-rpo/issues/44).
 
 ## Read the same version
 
@@ -38,7 +38,7 @@ The first task covers question 1. You can examine another question in the same t
 3. **Adverse or missing element:** what must remain visible, including what challenges the founder's account?
 4. **Next review question:** what should a human examine next?
 
-[Post your observation in #44](https://github.com/openproof-net/openproof-rpo/issues/44). Use only the fictional material. For a larger deliverable, dataset or code change, agree scope and applicable rights first.
+After the interactive exercise prepares your response, [post it in #44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want public review. Use only the fictional material. For a larger deliverable, dataset or code change, agree scope and applicable rights first.
 
 ## Keep the wider context open
 
