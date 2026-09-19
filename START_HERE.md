@@ -1,4 +1,6 @@
-# Your first five minutes with OpenProof
+# Separate technical integrity exercise — five minutes
+
+> This is **not** the first contributor review. If you want to contribute, start with the [guided 15-minute cofounder map](https://app.openproof.net/contribute?lang=en) ([français](https://app.openproof.net/contribute?lang=fr)). This page is a separate technical introduction to the public RPO integrity checker.
 
 **Question:** can you distinguish what a record says, what remains unresolved and whether the record has changed?
 
@@ -49,6 +51,8 @@ A short report is useful even if you stopped before finishing. Posting requires 
 
 For a technical failure or proposed fictional example, see the [other contribution formats](CONTRIBUTING.md). Completing this exercise does not enrol you in a paid pilot.
 
-## Continue with the shared challenge
+## Continue with the contributor path
 
-Ready to help shape the documentary review workflow? [Read the Cedar source pack](examples/community-cedar/README.md), then [choose a research, reader-experience or technical task](COMMUNITY.md#first-tasks). Gersende leads the project and coordinates the first contributor circle. This second exercise is manual review and design; it does not imply that automated document analysis has been released.
+Ready to help shape the documentary review workflow? **[Open the guided cofounder exercise](https://app.openproof.net/contribute?lang=en)** ([français](https://app.openproof.net/contribute?lang=fr)), start with S02, compare S03 and S04, and prepare the four-part review. GitHub #44 is the optional publication step after the exercise.
+
+For technical work after that, see [COMMUNITY.md](COMMUNITY.md#first-tasks) and the separate [Cedar source pack](examples/community-cedar/README.md). Gersende leads the project and coordinates the first contributor circle. These public exercises do not imply that automated document analysis has been released.
