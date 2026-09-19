@@ -26,12 +26,11 @@ only if you want to publish it on GitHub.
 A well-supported disagreement is as useful as agreement. You do not need to
 endorse OpenProof, follow an account or star the repository to contribute.
 
-To introduce a contribution or use case privately, use the
+For a general contribution idea or a use case outside the guided exercise, use the
 [Research and contribution form](https://openproof.net/fr?interest=research&utm_source=github&utm_medium=repository&utm_campaign=contributor-review#contact).
-The site's main contribution route remains this form. After a confirmed save,
-the existing route leads to #44. A saved contact is not a completed review.
-You can also leave the first public observation directly in #44 under your
-GitHub handle. Do not post personal contact details or real case documents.
+That form is separate from the guided first review. The **primary first-review
+route is the interactive exercise above**; #44 is its optional publication step.
+Do not post personal contact details or real case documents.
 
 ## 2. Consider an individually invited review
 
