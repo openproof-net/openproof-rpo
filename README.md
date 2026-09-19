@@ -2,9 +2,9 @@
 
 This repository contains the **draft RPO specification, fictional reference examples and the supported local integrity checker**. It is not the hosted OpenProof Legal application or the private TruthX Engine. The public format remains **version 0.1**; the permanent repository name and the format version are separate concerns. No certification, recognised-standard status or external adoption is asserted.
 
-**[Start with one claim — a 15-minute review, no coding required](https://github.com/openproof-net/openproof-rpo/issues/44).** Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
+**[Start in the interactive map — a guided 15-minute review, no coding required](https://app.openproof.net/contribute?lang=en).** [Version française](https://app.openproof.net/contribute?lang=fr). Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
 
-Read the [fictional cofounder case and five review questions](examples/cofounders-review/README.md). French and English are welcome. Leave one sourced observation directly in the issue; no introduction or task reservation is required for this first response. The suggested time is a scope, not a measured completion time.
+The map guides you through S02, S03 and S04 and prepares a four-part review. **GitHub #44 is the publication step, not the starting step.** After the exercise prepares your text, publish it in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want it reviewed publicly. No introduction or task reservation is required.
 
 [See the contributor journey](CONTRIBUTOR_JOURNEY.md): first public review, a possible individually authorised private mission, and a reusable public improvement. Private access is not automatic; that next stage is being prepared.
 
@@ -43,7 +43,7 @@ OpenProof Legal is being piloted for people who examine and hand over complex do
 
 **SOURCE TRACEABILITY · HUMAN REVIEW · OPEN COLLABORATION**
 
-Gersende leads the project and is forming its first circle of researchers, developers and documentary professionals. Start with [one claim in the cofounder case](https://github.com/openproof-net/openproof-rpo/issues/44), then help evaluate the inference, improve report readability or specify citation checks. Each task has a bounded deliverable; no coding is required for a first review.
+Gersende leads the project and is forming its first circle of researchers, developers and documentary professionals. Start with the [guided cofounder exercise](https://app.openproof.net/contribute?lang=en), then publish the prepared review in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want a public review. Each task has a bounded deliverable; no coding is required for a first review.
 
 [Join the shared challenge](COMMUNITY.md) · [Try the five-minute integrity exercise](START_HERE.md) · [What is available](#what-is-available-today)
 
@@ -71,7 +71,7 @@ The fictional record and local JSON comparison below are available. The public c
 
 | Your question | Where to go |
 | --- | --- |
-| How can I help in 15 minutes? | [Review one claim in the cofounder case — #44](https://github.com/openproof-net/openproof-rpo/issues/44) |
+| How can I help in 15 minutes? | [Open the guided interactive exercise](https://app.openproof.net/contribute?lang=en), then publish in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) |
 | What does a record look like? | [Read the fictional Atlas case](examples/public-demo/README.md) |
 | Can I reproduce the integrity check? | Run the local example below |
 | What are the technical boundaries? | [Architecture and limitations](docs/architecture.md) |
