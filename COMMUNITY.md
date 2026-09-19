@@ -4,7 +4,9 @@
 
 A case can cite its sources and still leave part of the story out. In our fictional example, three cofounders fall out: shared decisions, disputed spending and conflicting evidence must remain open to review.
 
-**[Start the guided interactive review — suggested scope: 15 minutes →](https://app.openproof.net/contribute?lang=en)** · [Français](https://app.openproof.net/contribute?lang=fr)
+**[Start the Investigation module — guided review, suggested scope: 15 minutes →](https://app.openproof.net/contribute?lang=en)** · [Français](https://app.openproof.net/contribute?lang=fr)
+
+This exercise covers one OpenProof module: the read-only Investigation workspace and interactive map. It is not the complete Legal product. The broader journey continues from investigation to case understanding, deeper contradiction/causality/source review, human strategic review, and a structured RPO output.
 
 No coding or installation is needed. The map starts with S02, then guides you to S03 and S04 before the four-part review form. A GitHub account is needed only if you choose to publish the prepared review in [#44](https://github.com/openproof-net/openproof-rpo/issues/44).
 
