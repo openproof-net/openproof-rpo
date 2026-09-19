@@ -4,13 +4,13 @@
 
 A case can cite its sources and still leave part of the story out. In our fictional example, three cofounders fall out: shared decisions, disputed spending and conflicting evidence must remain open to review.
 
-**[Review one claim — suggested scope: 15 minutes →](https://github.com/openproof-net/openproof-rpo/issues/44)**
+**[Start the guided interactive review — suggested scope: 15 minutes →](https://app.openproof.net/contribute?lang=en)** · [Français](https://app.openproof.net/contribute?lang=fr)
 
-No coding, installation or introduction is needed. Read the sources freely; a GitHub account is needed only to reply. French and English are welcome. The time is indicative, not a measured completion time.
+No coding or installation is needed. The map starts with S02, then guides you to S03 and S04 before the four-part review form. A GitHub account is needed only if you choose to publish the prepared review in [#44](https://github.com/openproof-net/openproof-rpo/issues/44).
 
 ## Your first contribution in four lines
 
-Read [S02](https://openproof.net/docs/case-brief.html#source-S02), [S03](https://openproof.net/docs/case-brief.html#source-S03) and [S04](https://openproof.net/docs/case-brief.html#source-S04). Challenge the deliberately unsupported claim in [#44](https://github.com/openproof-net/openproof-rpo/issues/44), then leave:
+Use the [interactive exercise](https://app.openproof.net/contribute?lang=en) to read S02, S03 and S04 in context. Challenge the deliberately unsupported claim, prepare your return in the form, then publish it in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want a public review:
 
 1. What the documents support.
 2. The source IDs supporting your wording.
@@ -31,7 +31,7 @@ The material was prepared with AI assistance for demonstration. It is not output
 
 | Your perspective | Small first task | Expected contribution |
 | --- | --- | --- |
-| Research or professional document review | [15 min: review one claim — #44](https://github.com/openproof-net/openproof-rpo/issues/44) | Four lines with a proposed wording, source IDs, adverse evidence and an open question |
+| Research or professional document review | [15 min: guided interactive review](https://app.openproof.net/contribute?lang=en) | Four lines with a proposed wording, source IDs, adverse evidence and an open question; publish in #44 only at the end |
 | User experience | [30 min: find the source — #45](https://github.com/openproof-net/openproof-rpo/issues/45) | One annotated screen or sketch; up to three observed difficulties, or label it untested |
 | Development | [45–60 min: describe a citation check — #46](https://github.com/openproof-net/openproof-rpo/issues/46) | Existing ID, missing ID, and an existing reference that does not support the claim |
 
