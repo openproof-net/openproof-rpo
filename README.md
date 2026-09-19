@@ -8,7 +8,7 @@ The map guides you through S02, S03 and S04 and prepares a four-part review. **G
 
 [See the contributor journey](CONTRIBUTOR_JOURNEY.md): first public review, a possible individually authorised private mission, and a reusable public improvement. Private access is not automatic; that next stage is being prepared.
 
-For the existing technical introduction, use the [public integrity exercise](START_HERE.md). All examples are fictional and manually prepared; they do not demonstrate automatic contradiction detection. A fingerprint checks a change against a retained reference, not the truth of a dossier.
+For the separate technical integrity introduction, use [START_HERE.md](START_HERE.md). It is **not** the contributor first-review path: the guided cofounder map above remains the primary route. All examples are fictional and manually prepared; they do not demonstrate automatic contradiction detection. A fingerprint checks a change against a retained reference, not the truth of a dossier.
 
 **SCATTERED DOCUMENTS · CONFLICTING CLAIMS · A DECISION TO JUSTIFY**
 
@@ -72,7 +72,7 @@ The fictional record and local JSON comparison below are available. The public c
 | Your question | Where to go |
 | --- | --- |
 | How can I help in 15 minutes? | [Open the guided interactive exercise](https://app.openproof.net/contribute?lang=en), then publish in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) |
-| What does a record look like? | [Read the fictional Atlas case](examples/public-demo/README.md) |
+| What does the separate integrity-check example look like? | [Read the fictional Atlas integrity case](examples/public-demo/README.md) |
 | Can I reproduce the integrity check? | Run the local example below |
 | What are the technical boundaries? | [Architecture and limitations](docs/architecture.md) |
 | What is the data format? | [Format guide](spec/rpo-format.md) and [JSON Schema](spec/rpo-schema.json) |

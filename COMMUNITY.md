@@ -76,4 +76,4 @@ The campaign aims for five external trials, three reasoned reviews, one verified
 
 Count an external trial only when a person reports what they examined or tried; internal activity, bots, visits, stars and followers do not establish a trial. An improvement needs a linked change and a check of the original problem.
 
-[Review one claim now](https://github.com/openproof-net/openproof-rpo/issues/44) · [Questions and orientation — #43](https://github.com/openproof-net/openproof-rpo/issues/43) · [Contribution details](CONTRIBUTING.md)
+[Start the guided 15-minute review](https://app.openproof.net/contribute?lang=en) · [Français](https://app.openproof.net/contribute?lang=fr) · [Questions and orientation — #43](https://github.com/openproof-net/openproof-rpo/issues/43) · [Publish a prepared review — #44](https://github.com/openproof-net/openproof-rpo/issues/44)
