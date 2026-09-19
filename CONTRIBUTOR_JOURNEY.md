@@ -3,18 +3,25 @@
 Help make document review inspectable: trace a statement to its source, preserve
 uncertainty and show how a correction changes the result.
 
-**Available now:** [review one claim in the fictional cofounder case — #44](https://github.com/openproof-net/openproof-rpo/issues/44).
-No installation or coding is required. French and English are welcome. The
-suggested first scope is 15 minutes; tell us the time you actually spent.
+**Available now:** [open the guided interactive exercise](https://app.openproof.net/contribute?lang=en)
+or [use it in French](https://app.openproof.net/contribute?lang=fr). No installation
+or coding is required. The suggested first scope is 15 minutes. The exercise
+prepares your return; [#44](https://github.com/openproof-net/openproof-rpo/issues/44)
+is the optional public publication step.
 
 ## 1. Try one sourced observation
 
-Read the [fictional case](examples/cofounders-review/README.md). In #44, leave:
+In the interactive exercise:
 
-- wording supported by the documents;
-- the source IDs and relevant passage;
-- an adverse element or uncertainty to preserve;
-- the next question a reviewer should examine.
+1. click **Start with S02 / Commencer par S02**;
+2. compare S02, S03 and S04 in the read-only map;
+3. preserve any adverse or missing element;
+4. complete the four review fields and click **Prepare my review / Préparer mon retour**.
+
+The prepared return contains supported wording, source IDs and passage, an
+adverse element or uncertainty, and the next question a reviewer should examine.
+Copy it into [#44](https://github.com/openproof-net/openproof-rpo/issues/44)
+only if you want to publish it on GitHub.
 
 A well-supported disagreement is as useful as agreement. You do not need to
 endorse OpenProof, follow an account or star the repository to contribute.
@@ -67,10 +74,11 @@ confidential documents. Contribution and purchase are independent decisions.
 
 ## Current status
 
-As of 18 September 2026, the fictional exercise and local integrity checker are
-available. A populated contributor map, private invitations and the complete
-private review journey have not been qualified end to end. No external trial,
-case access or product adoption is asserted by this page.
+As of 19 September 2026, the public contributor route has been qualified end to
+end with an external Google test account: sign-in, exercise-only space, populated
+fictional cofounder map and review form. This does not grant private-case access
+or establish product adoption. Private invitations remain separate and individually
+authorised.
 
 For the public project, a star expresses interest; following
 [Gersende](https://github.com/Gersenderdp) follows the project lead's work.
