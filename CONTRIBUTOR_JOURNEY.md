@@ -5,7 +5,8 @@ uncertainty and show how a correction changes the result.
 
 **Available now:** [open the guided interactive exercise](https://app.openproof.net/contribute?lang=en)
 or [use it in French](https://app.openproof.net/contribute?lang=fr). No installation
-or coding is required. The suggested first scope is 15 minutes. The exercise
+or coding is required. The map opens in overview without sign-in or a form.
+Explore freely first; the optional guided review takes a suggested 15 minutes. The exercise
 prepares your return; [#44](https://github.com/openproof-net/openproof-rpo/issues/44)
 is the optional public publication step.
 
@@ -13,15 +14,18 @@ is the optional public publication step.
 
 In the interactive exercise:
 
-1. click **Start with S02 / Commencer par S02**;
-2. compare S02, S03 and S04 in the read-only map;
+1. explore the overview, actors, sources and chronology; for a guided review,
+   click **Start with S02 / Commencer par S02**;
+2. compare S02, S03, S04 and S06 in the read-only map;
 3. preserve any adverse or missing element;
-4. complete the four review fields and click **Prepare my review / Préparer mon retour**.
+4. optionally open **Try the 15-minute review / Faire la revue de 15 minutes**,
+   complete its four fields and click **Prepare my review / Préparer mon retour**.
 
 The prepared return contains supported wording, source IDs and passage, an
 adverse element or uncertainty, and the next question a reviewer should examine.
 Copy it into [#44](https://github.com/openproof-net/openproof-rpo/issues/44)
-only if you want to publish it on GitHub.
+only if you want to publish it on GitHub. Publishing requires a GitHub account;
+exploring and preparing a review do not require an OpenProof account.
 
 A well-supported disagreement is as useful as agreement. You do not need to
 endorse OpenProof, follow an account or star the repository to contribute.
@@ -73,11 +77,11 @@ confidential documents. Contribution and purchase are independent decisions.
 
 ## Current status
 
-As of 19 September 2026, the public contributor route has been qualified end to
-end with an external Google test account: sign-in, exercise-only space, populated
-fictional cofounder map and review form. This does not grant private-case access
-or establish product adoption. Private invitations remain separate and individually
-authorised.
+As of 21 September 2026, the fictional map opens directly in overview before
+sign-in. The contributor account and review panels are optional. The eight
+sources include S06 and its limits on approval rules and economic loss.
+This does not grant private-case access or establish product adoption.
+Private invitations remain separate and individually authorised.
 
 For the public project, a star expresses interest; following
 [Gersende](https://github.com/Gersenderdp) follows the project lead's work.
