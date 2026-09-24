@@ -4,7 +4,7 @@
 **Date:** 23 September 2026.  
 **Scope:** public synthetic material only.
 
-This draft records three methodological suggestions for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted provenance one-pager remains unchanged at [v0.1](./PROVENANCE_ONE_PAGER_V0.1.md).
+This draft records three methodological suggestions for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
 
 ## Existing four-field review record
 
