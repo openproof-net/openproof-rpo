@@ -15,6 +15,8 @@ The exercise starts at S02, guides you through S03 and S04, and prepares the fou
 
 **Reference version: 2026-09-16.** Eight excerpts, five review findings and five context questions were written for the demonstration. People, dates, amounts and documents are invented. This is not a real case, engine output, externally validated benchmark or legal verdict.
 
+**Provenance review:** [v0.1](PROVENANCE_ONE_PAGER_V0.1.md) is preserved as the submitted review draft. [v0.2](PROVENANCE_ONE_PAGER_V0.2.md) is the revised draft following external technical review: corrected PROV relation directions, explicit derivation for the reported-overrun observation, and separate operational / review / reconstruction levels. It is **not scientific validation**.
+
 The linked public case is the source of the excerpts. Do not silently substitute a later version: state the version you reviewed and flag any source change. These exercises and the [provisional review guide](REVIEW_GUIDE.md) were prepared with AI assistance and remain open to correction.
 
 ## Five claims to challenge
