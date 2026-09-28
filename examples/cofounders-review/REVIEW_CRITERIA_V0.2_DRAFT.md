@@ -2,6 +2,7 @@
 
 **Status:** candidate criteria for the public fictional Cofounders case.  
 **Date:** 23 September 2026.  
+**Revision:** 28 September 2026 — contextual-linkage check added from public review.  
 **Scope:** public synthetic material only.
 
 This draft records three methodological suggestions for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
@@ -34,6 +35,17 @@ Record separately:
 - `recorded_at`: when OpenProof or a reviewer learned or recorded it.
 
 A narrative summary remains derived and non-authoritative. The underlying dated source controls.
+
+Before labelling two passages as contradictory, first establish that they concern the same decision context:
+
+- the same expense, transaction, or explicitly linked set of expenses;
+- the commitment date and the approval rule then in force;
+- the identified approver or approvers;
+- the payment date and documented consequence, recorded separately from commitment.
+
+If that linkage is missing, classify the relationship as **missing context / unresolved linkage**, not as a contradiction to be resolved. A payment made after an authority change does not by itself show that the later approval rule governed the earlier commitment.
+
+**Public review note:** this clarification follows [AlekseiUL's comment on #44](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5869099083). It refines a proposed criterion; it is not an implementation, test result, or scientific validation.
 
 For a causal statement, also record the asserted inference family:
 
