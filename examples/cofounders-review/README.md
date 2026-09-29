@@ -6,6 +6,12 @@ Three people build a business together. After their relationship breaks down, on
 
 The exercise starts at S02, guides you through S03 and S04, and prepares the four-part response. No coding or installation is needed. A GitHub account is required only if you choose to publish the prepared response in [#44](https://github.com/openproof-net/openproof-rpo/issues/44).
 
+## Understand the source codes
+
+**[S01–S08: titles, dates and all eight excerpts in English and French](SOURCE_GUIDE.md)**
+
+For example, [S06 — Change to approval authority / Modification des pouvoirs de validation](SOURCE_GUIDE.md#s06) is the excerpt dated 5 May 2025. The guide keeps the full fictional material readable directly on GitHub, alongside links to the public case. No ChatGPT or OpenProof account is required to read it.
+
 ## Read the same version
 
 | Material | English | Français |
