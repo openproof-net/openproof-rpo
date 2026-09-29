@@ -16,7 +16,11 @@ In the interactive exercise:
 
 1. explore the overview, actors, sources and chronology; for a guided review,
    click **Start with S02 / Commencer par S02**;
-2. compare S02, S03, S04 and S06 in the read-only map;
+2. compare [S02 — Investment minutes](examples/cofounders-review/SOURCE_GUIDE.md#s02),
+   [S03 — Spending schedule](examples/cofounders-review/SOURCE_GUIDE.md#s03),
+   [S04 — Late-warning message](examples/cofounders-review/SOURCE_GUIDE.md#s04) and
+   [S06 — Change to approval authority](examples/cofounders-review/SOURCE_GUIDE.md#s06)
+   in the read-only map; the linked guide also contains every excerpt in English and French;
 3. preserve any adverse or missing element;
 4. optionally open **Try the 15-minute review / Faire la revue de 15 minutes**,
    complete its four fields and click **Prepare my review / Préparer mon retour**.
