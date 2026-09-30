@@ -127,7 +127,6 @@ The rules above are OpenProof's methodological synthesis. The linked contributio
 2. Are event validity and recording time kept distinct?
 3. Is the inference type explicit before a human accepts a causal conclusion?
 4. Does the final decision preserve what is established while keeping authorization, payment, loss, and causation open where evidence is missing?
-
 5. Can the reader distinguish reference resolution, each clause's support, retraction status and the human decision without a combined score?
 6. Does a rewrite preserve the original wording and make its missing premise visible?
 

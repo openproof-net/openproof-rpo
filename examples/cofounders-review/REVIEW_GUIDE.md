@@ -76,7 +76,7 @@ responsibility attribution**.
 
 [S04](SOURCE_GUIDE.md#s04) records an acknowledgment that the warning should
 have come sooner. Keep this adverse element next to B2; it does not, by itself,
-establish the opposite universal claim that the founder caused every loss.
+establish that the founder caused any particular loss, let alone every loss.
 
 [S03](SOURCE_GUIDE.md#s03) reports spending above budget with supporting records
 still to reconcile. [S06](SOURCE_GUIDE.md#s06) changes approval authority from
