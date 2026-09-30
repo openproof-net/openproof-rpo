@@ -25,6 +25,10 @@ For example, [S06 — Change to approval authority / Modification des pouvoirs d
 
 The linked public case is the source of the excerpts. Do not silently substitute a later version: state the version you reviewed and flag any source change. These exercises and the [provisional review guide](REVIEW_GUIDE.md) were prepared with AI assistance and remain open to correction.
 
+## Try a bounded written example
+
+[Same passage, two conclusions](REVIEW_GUIDE.md#same-passage-two-conclusions): inspect one supported observation and one excessive inference, with the missing premise shown. This written companion can be read directly on GitHub and reused under the existing file-level MIT scope. Its proposed annotations are prepared with AI assistance, not engine output or independently validated labels. Suggested review time: 5–10 minutes, still to be tested with a reader.
+
 ## Five claims to challenge
 
 Every claim below is **deliberately too strong**. Correct it using the source passages; do not assume the allegation, the rebuttal or our proposed review is true.
