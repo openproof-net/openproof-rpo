@@ -2,10 +2,10 @@
 
 **Status:** candidate criteria for the public fictional Cofounders case.  
 **Date:** 23 September 2026.  
-**Revision:** 28 September 2026 — contextual-linkage check added from public review.  
+**Revision:** 1 October 2026 — clause-level support and separate review states added after public review.  
 **Scope:** public synthetic material only.
 
-This draft records three methodological suggestions for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
+This draft records candidate methodological criteria for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
 
 ## Existing four-field review record
 
@@ -87,12 +87,48 @@ The following do not follow without additional evidence:
 
 A compliant review must therefore preserve the dated authority change in S06, identify transaction-level approval and payment evidence as missing, and leave individual causation open.
 
+## Candidate D — inspect each clause before accepting the proposition
+
+A located reference is not a support verdict. Record these properties separately:
+
+| Property | What to record | Boundary |
+| --- | --- | --- |
+| Reference resolution | Source identity, inspected version, exact passage/locator; resolved or unresolved | A missing reference cannot be replaced by an invented passage. Keep the original identifier visible. |
+| Clause support | Exact clause, passage, supported / not established / contradicted, and a reason | Check direction, scope, population or actors, and strength. A premise inferred from the text is not automatically stated by it. |
+| Retraction status | Not checked, checked with dated evidence, or not applicable with a reason | No retraction found is not proof of support. Unknown is not cleared. |
+| Human decision | Pending, keep, narrow, reject or leave open; reviewer, rationale and time when actually reviewed | Approval records a decision; it cannot overwrite an unsupported clause as supported. |
+
+These are **proposed review fields**, not additions to the RPO v0.1 schema or an implemented interface.
+
+Split a sentence into inspectable clauses. Make that split visible and open to correction.
+For each material clause:
+
+1. Compare its exact wording against the exact inspected source version, including limiting text.
+2. Keep supporting, adverse and opposing passages visible together. Check the contextual linkage in Candidate B before labelling a contradiction.
+3. If evidence is silent, use **not established / unresolved**, with the missing premise. A classifier's `NEUTRAL` label alone supplies neither support nor contradiction.
+4. Reserve **contradicted** for evidence that supports an incompatible proposition in the same relevant context. Adverse evidence can weaken a conclusion without establishing its opposite.
+5. Do not mark a whole proposition supported while any material clause remains not established or contradicted. Show the clause results rather than averaging them into a score. An unresolved-reference state and an unresolved-support state must name their different layers.
+
+For a supported observation, expose its explanatory boundary: **no causal or responsibility attribution** unless the necessary additional premises are supported. Scope may also exclude claims about authorization, payment or economic loss.
+
+If wording is too strong, preserve it and its failed support judgment, then propose narrower wording supported by the passage. Seek additional evidence for a named gap; do not silently rewrite the original or repeatedly retrieve merely to justify it. A rewritten block can be traceable yet unsupported: transformation metadata does not replace comparison with the exact source version.
+
+**Reusable worked example:** [same S02 passage, supported observation and excessive conclusion](REVIEW_GUIDE.md#same-passage-two-conclusions). Its annotations are proposed review judgments prepared with AI assistance, not model output or an independent human evaluation.
+
+**Public review trail:** [clause split and adverse evidence](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5887164319), [unresolved versus contradicted](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5887464067), [repair and retrieval](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5890865713), [three independent gates](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5906001757), [neutral evidence](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5906911399), [clause-level display proposal](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5906911618), [Muhammad Rashid's public contribution](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5911992308), [Aryan Pardeshi's authorized verbatim contribution and the separate OpenProof decision](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5919636011), and [transformed-block review](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5886569076).
+
+The rules above are OpenProof's methodological synthesis. The linked contributions retain their own wording, attribution choices and rights; no private correspondence is reproduced or newly paraphrased here. The different proposed vocabularies are not claimed to form a validated universal taxonomy.
+
+**Current state:** documented proposal with a worked example; not an automated semantic checker, external trial or scientific validation.
+
 ## Review questions
 
 1. Does the paired-conclusion check expose the missing premise?
 2. Are event validity and recording time kept distinct?
 3. Is the inference type explicit before a human accepts a causal conclusion?
 4. Does the final decision preserve what is established while keeping authorization, payment, loss, and causation open where evidence is missing?
+5. Can the reader distinguish reference resolution, each clause's support, retraction status and the human decision without a combined score?
+6. Does a rewrite preserve the original wording and make its missing premise visible?
 
 ## Change rule
 
