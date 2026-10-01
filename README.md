@@ -1,87 +1,66 @@
-# OpenProof RPO — Specification & Reference Examples
+# OpenProof RPO — public specification and examples
 
-This repository contains the **draft RPO specification, fictional reference examples and the supported local integrity checker**. It is not the hosted OpenProof Legal application or the private TruthX Engine. The public format remains **version 0.1**; the permanent repository name and the format version are separate concerns. No certification, recognised-standard status or external adoption is asserted.
+OpenProof helps a reviewer keep **sources, transformations, claims, uncertainty and human decisions** connected in a documentary case.
 
-**[Start in the Investigation module — a guided 15-minute interactive review, no coding required](https://app.openproof.net/contribute?lang=en).** [Version française](https://app.openproof.net/contribute?lang=fr). You are testing one OpenProof module: the read-only Investigation workspace and its interactive map, not the complete product. Three cofounders built a business together; after their relationship breaks down, one faces a substantial financial claim. Help separate shared decisions, personal shortcomings and losses that still need evidence.
+This repository contains the **draft RPO format, fictional examples and a supported local integrity checker**. It does not contain the hosted OpenProof Legal application or the private TruthX Engine. The public format remains **v0.1**; no certification, recognised-standard status, scientific validation or external adoption is claimed.
 
-The map guides you through S02, S03 and S04 and prepares a four-part review. **GitHub #44 is the publication step, not the starting step.** After the exercise prepares your text, publish it in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want it reviewed publicly. No introduction or task reservation is required.
+## Choose a public path
 
-[See the contributor journey](CONTRIBUTOR_JOURNEY.md): first public review, a possible individually authorised private mission, and a reusable public improvement. Private access is not automatic; that next stage is being prepared.
-
-For the separate technical integrity introduction, use [START_HERE.md](START_HERE.md). It is **not** the contributor first-review path: the guided cofounder map above remains the primary route. All examples are fictional and manually prepared; they do not demonstrate automatic contradiction detection. A fingerprint checks a change against a retained reference, not the truth of a dossier.
-
-**SCATTERED DOCUMENTS · CONFLICTING CLAIMS · A DECISION TO JUSTIFY**
-
-<table>
-<tr>
-<td width="150" valign="top"><a href="https://github.com/Gersenderdp"><img src="docs/images/gersende-de-parcey.png" width="140" alt="Portrait of Gersende Ryard de Parcey, founder of TruthX and OpenProof"></a></td>
-<td valign="middle">
-<strong>Gersende Ryard de Parcey</strong><br>
-Founder & project lead — TruthX / OpenProof<br>
-Transformation COO · Interim Executive
-<p>I design the product and review workflow: find the source, preserve uncertainty and keep responsibility for decisions visible.</p>
-<a href="https://github.com/Gersenderdp">Meet the founder</a> · <a href="https://www.linkedin.com/in/gryard/">Professional background</a>
-</td>
-</tr>
-</table>
-
-**RESEARCH COLLABORATION SINCE 2025 · GREYC / UNIVERSITÉ DE CAEN NORMANDIE**
-
-**Conceived and led by Gersende Ryard de Parcey. Developed through research with Professor [Gaël Dias](https://dias.users.greyc.fr/), Lucy Martin and Clément Correia-Peltier.**
-
-Gersende designed the initial thirteen-module architecture. Under Gaël Dias's academic supervision, Lucy and Clément developed a multi-agent research prototype and delivered code, a report and a presentation in May 2026. Their work spans document extraction, consistency checks, structured analysis and report generation.
-
-**A research foundation already exists. Help turn it into a clearer, more useful document review experience.** The student prototype's integration into the current engine remains to be done.
-
-[Meet the research team and see what was delivered](RESEARCH_COLLABORATION.md).
-
-**Find the source. Keep uncertainty visible. Retain human review.**
-
-OpenProof Legal is being piloted for people who examine and hand over complex documentary cases. **Try today:** a fictional record and a local check that detects a change against a retained reference. Automated document analysis is not part of this public exercise.
-
-### [Build OpenProof with us →](COMMUNITY.md)
-
-**SOURCE TRACEABILITY · HUMAN REVIEW · OPEN COLLABORATION**
-
-Gersende leads the project and is forming its first circle of researchers, developers and documentary professionals. Start with the [guided cofounder exercise](https://app.openproof.net/contribute?lang=en), then publish the prepared review in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) if you want a public review. Each task has a bounded deliverable; no coding is required for a first review.
-
-[Join the shared challenge](COMMUNITY.md) · [Try the five-minute integrity exercise](START_HERE.md) · [What is available](#what-is-available-today)
-
-## The problem we want to solve
-
-| In your work | Consequence to investigate | Control being designed |
+| Goal | Start here | What you will get |
 | --- | --- | --- |
-| A summary makes a claim, but its source is hard to find | A reviewer has to repeat the search | Explicit links between claims and sources |
-| Two documents disagree | An unresolved point can disappear in the handover | Preserve the discrepancy and the question for human review |
-| A record changes after review | People may be discussing different versions | Compare it with a separately retained reference |
+| Review a claim without coding | [Guided Cofounders investigation — suggested scope: 15 min](https://app.openproof.net/contribute?lang=en) · [Français](https://app.openproof.net/contribute?lang=fr) | A fictional case showing what a source supports, what it leaves open and what a person must decide |
+| Reproduce a technical control | [Five-minute Atlas integrity exercise](START_HERE.md) | A local comparison that detects whether a JSON record changed relative to a retained reference |
+| Inspect the format and limits | [RPO format](spec/rpo-format.md) · [schema](spec/rpo-schema.json) · [architecture](docs/architecture.md) | The draft structure, public verification boundary and implementation limits |
+| Challenge or improve the method | [Contribution guide](COMMUNITY.md) | Small review, counter-example and documentation tasks with bounded scope |
+| Discuss a Legal pilot | [Describe the need](https://openproof.net/qualify?intent=case) | A qualification conversation; no confidential evidence should be submitted through the public form |
 
-These are needs to test with users, not measured savings. **Only the record comparison is implemented in the supported public checker.** The fictional example illustrates the other controls; it does not discover contradictions automatically.
+A GitHub account is not required to explore the guided case. It is needed only if you choose to publish a contribution.
 
-## The design behind the product
+## The problem
 
-Gersende brings experience in organisational transformation, executive operations and crisis work to the product's design. The review workflow connects sources, uncertainty, competing interpretations and human responsibility. The public code makes specific controls examinable; it does not establish product performance.
+A citation can resolve correctly while failing to support the sentence attached to it. A transformation can be traceable while changing the evidential scope. A complete-looking conclusion can hide missing premises.
 
-> Do not stop trusting. Stop trusting what cannot be reconstructed.
+OpenProof therefore keeps these objects distinguishable:
+
+1. source and inspected version;
+2. transformation and its provenance;
+3. exact claim or clause;
+4. support, adverse evidence and uncertainty;
+5. reasoning and missing premises;
+6. proposed conclusion;
+7. human review decision.
+
+This is a review discipline, not a truth score. A hash establishes neither authenticity nor factual accuracy when both the record and reference can be replaced.
+
+## One worked example
+
+In the fictional Cofounders case, S02 records collective approval of an investment capped at €120,000. The same passage can support:
+
+> The investment was collectively approved up to €120,000.
+
+It does not, by itself, support:
+
+> Therefore none of the losses can be attributed to the third founder.
+
+The second sentence needs additional premises about payments, loss, causation and responsibility. [Inspect the same-passage review](examples/cofounders-review/REVIEW_GUIDE.md#same-passage-two-conclusions), including adverse evidence and the proposed narrower wording.
+
+The annotations are teaching proposals prepared with AI assistance. They are not engine output, independent human labels or a legal conclusion.
 
 ## What is available today
 
-The fictional record and local JSON comparison below are available. The public checker does **not** ingest your PDFs, find missing pieces, reconstruct your dossier or detect its contradictions. The complete application and TruthX Engine remain private; Legal is being piloted.
+| Public component | Available | Boundary |
+| --- | --- | --- |
+| Fictional Cofounders review | Readable sources, proposed criteria and worked review | Manual example; no automatic semantic reasoning is demonstrated |
+| Atlas integrity checker | Basic field inspection and deterministic fingerprint comparison | Not full schema validation, source verification, authenticity or truth checking |
+| RPO format | Public v0.1 draft and JSON Schema | Not a recognised standard or certification |
+| OpenProof Legal | A private product being prepared for bounded pilots | Not distributed from this repository |
+| TruthX Engine | Private implementation | Not open sourced here |
 
-## Start here
+The public repository is independently useful for examining the method and reproducing the integrity example. It must not be presented as the complete product.
 
-| Your question | Where to go |
-| --- | --- |
-| How can I help in 15 minutes? | [Open the guided interactive exercise](https://app.openproof.net/contribute?lang=en), then publish in [#44](https://github.com/openproof-net/openproof-rpo/issues/44) |
-| What does the separate integrity-check example look like? | [Read the fictional Atlas integrity case](examples/public-demo/README.md) |
-| Can I reproduce the integrity check? | Run the local example below |
-| What are the technical boundaries? | [Architecture and limitations](docs/architecture.md) |
-| What is the data format? | [Format guide](spec/rpo-format.md) and [JSON Schema](spec/rpo-schema.json) |
-| Who is building this? | [Gersende de Parcey](https://github.com/Gersenderdp) |
-| Can I propose a use case or a pilot? | [Describe the need](https://openproof.net/qualify?intent=case), without confidential documents |
+## Run the public integrity check
 
-## Verify the public example locally
-
-Requires Node.js 22 or later and Git. No package installation, API key, account or engine access is needed.
+Requires Node.js 22 or later and Git. No package installation, API key or OpenProof account is needed.
 
 ```sh
 git clone https://github.com/openproof-net/openproof-rpo.git
@@ -92,59 +71,30 @@ node --test tests/public-verification.test.cjs
 
 Expected result: `basic_structure_present: true`, `reference_matches: true`, exit code `0`.
 
-To observe a change being detected, copy `rpo-en.json`, edit `narrative.summary`, and run the same command against the edited file **while keeping the original `.sha256` reference**. The comparison returns `reference_matches: false` and exit code `1`.
+To see a change detected, copy `rpo-en.json`, edit `narrative.summary`, and compare the edited file while retaining the original `.sha256` reference. The result becomes `reference_matches: false` with exit code `1`.
 
-The checker reads local files only. It inspects basic fields and hashes the entire parsed object, with recursively sorted object keys, preserved array order, compact JSON and UTF-8 encoding. The demonstration accepts safe integer numbers only. This is a documented demonstration serialisation, not a claim of RFC 8785 conformance.
+The checker reads local files only. It hashes the parsed object using recursively sorted object keys, preserved array order, compact JSON and UTF-8. This demonstration serialisation is not a claim of RFC 8785 conformance.
 
-The retained digest represents the copy published in this repository. Preserve or authenticate that reference separately when using it as an integrity anchor: replacing both the object and its reference defeats a comparison. Recomputing an embedded hash alone cannot establish authenticity.
+## Contribute something reusable
 
-## What this demonstrates
+Three useful first gestures are:
 
-- A readable fictional scenario with explicit evidence references and an unresolved point.
-- Reproducible fingerprints and detection of a change relative to a retained reference.
-- A distinction between document structure, integrity and the truth of the underlying statements.
-- Checks that can be reproduced without the private application.
+- flag one ambiguity in a rule or example;
+- propose a counter-example that breaks a proposed review criterion;
+- improve one documented rule, fixture or explanation.
 
-**It does not verify** the source files, a PDF, signatures, a registry entry, the merits of a case or a legal conclusion. Basic field inspection is not full JSON Schema validation. The example contains illustrative source hashes and a PDF placeholder; it is not a signed or registered production export.
+Start with the [community guide](COMMUNITY.md) and read [CONTRIBUTING.md](CONTRIBUTING.md) before a larger change. A comment becomes project progress only when the decision and resulting artefact are traceable. Contributions remain proposals until reviewed and merged.
 
-## Product and repository status
+The public issues currently focus on [source review and transformation provenance — #44](https://github.com/openproof-net/openproof-rpo/issues/44), [extraction and readable source attachment — #45](https://github.com/openproof-net/openproof-rpo/issues/45), and [reference resolution versus semantic support — #46](https://github.com/openproof-net/openproof-rpo/issues/46).
 
-| Area | Status |
-| --- | --- |
-| Public JSON examples and local comparison | Available in this repository |
-| Browser demonstration | Public educational example; separate from the Legal application |
-| RPO format | Version 0.1 draft; the schema and implementation limits are explicit |
-| OpenProof Legal | First product pilot; availability and scope are qualified individually |
-| Complete application and TruthX Engine | Private implementation; not distributed here |
-| Future professional applications | Direction of development, not released products |
+## Project and research context
 
-A passing public test does not certify production readiness, factual accuracy or legal admissibility.
+**Gersende Ryard de Parcey**, founder of TruthX and OpenProof, leads the product and review method. [Professional background](https://www.linkedin.com/in/gryard/) · [GitHub](https://github.com/Gersenderdp)
 
-## How the parts fit together
+Research work began in 2025 with Professor [Gaël Dias](https://dias.users.greyc.fr/) at GREYC / Université de Caen Normandie. Lucy Martin and Clément Correia-Peltier delivered a student research prototype, report and presentation in May 2026. That prototype is not yet integrated into the current engine. [Research collaboration and credits](RESEARCH_COLLABORATION.md)
 
-**OpenProof** provides the application and review workflow. **TruthX Engine** is the structuring engine. **RPO** describes the resulting record. People review proposals and retain responsibility for decisions. See the [architecture](docs/architecture.md).
+## Licensing
 
-The `backend/`, `examples/cnrs-legal-mvp/`, `examples/example-minimal/`, `README-dev.md` and older documentation contain historical prototypes or design material. They are not the supported quick start or evidence of a live deployment. The current public walkthrough is `examples/public-demo/`.
+Selected files are available under MIT, including this README, the public checker, named specification files and fictional reference examples. The grant is file-specific: see the exact list in [LICENSING.md](LICENSING.md) and the [MIT License](LICENSE). The private application, TruthX Engine, research archives, real dossiers and unlisted files are outside that grant.
 
-## Help shape the next useful step
-
-The [first collaborative challenge](COMMUNITY.md) starts with the fictional cofounder case: eight written excerpts, five review questions and visible unanswered questions. The [provisional review guide](examples/cofounders-review/REVIEW_GUIDE.md) is available for critique; it is not product-generated, externally validated or a legal verdict. The [Cedar material](examples/community-cedar/README.md) remains a separate technical exercise.
-
-Researchers and practitioners can [challenge its observations](https://github.com/openproof-net/openproof-rpo/issues/44), readers can [improve the report layout](https://github.com/openproof-net/openproof-rpo/issues/45), and developers can [specify citation checks](https://github.com/openproof-net/openproof-rpo/issues/46). Gersende is responsible for priorities, coordination and acceptance; specialist reviewers are confirmed for defined tasks.
-
-This public work informs the existing Legal product. It does not start a replacement engine. The community invitation is published, but external participation, a complete open-source release and improved product performance are not yet established. See [contribution scope and rights](CONTRIBUTING.md).
-
-## Work with Gersende
-
-[OpenProof website](https://openproof.net/) · [Contact Gersende](https://openproof.net/#contact) · [Workspace sign-in](https://app.openproof.net/)
-
-
-For a possible Legal pilot, [describe the need](https://openproof.net/qualify?intent=case) without confidential evidence. Scope, deliverable, prerequisites, timing, acceptance criteria and price must be agreed before an engagement; the public exercise is not delivery of that service.
-
-For transformation or interim executive assignments, [contact Gersende](https://www.linkedin.com/in/gryard/). [TruthX](https://openproof.net/technology) presents the broader method and architecture.
-
-## Attribution and licensing status
-
-Maintained by **Gersende Ryard de Parcey**, founder of TruthX / OpenProof. Citation metadata is in [CITATION.cff](CITATION.cff).
-
-The public checker, selected specification files, fictional reference examples and supporting documentation are available under the [MIT License](LICENSE), within the exact file list in [LICENSING.md](LICENSING.md). Commercial reuse is permitted for those files under MIT. Other files retain their existing rights; research archives, the private application and engine, real dossiers, and linked visual assets are outside this grant. Citation metadata links to that scope instead of asserting a repository-wide licence.
+[OpenProof website](https://openproof.net/) · [Architecture and limitations](docs/architecture.md) · [CITATION.cff](CITATION.cff)
