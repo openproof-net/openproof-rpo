@@ -135,6 +135,57 @@ Use the existing [#46](https://github.com/openproof-net/openproof-rpo/issues/46)
 with the exact clause, passage and reason; request an attribution correction
 there if needed. These durations remain estimates.
 
+## Traceable transformation, two support outcomes
+
+This exercise starts from the exact fictional S03 passage:
+
+> Spending attributed to the investment totals €180,000, including €60,000 above the original budget. Supporting records for each line still need to be reconciled.
+
+Suppose one recorded transformation produces two candidate headings from that passage:
+
+| Candidate output | Transformation traceability | Support review | Missing premise or limit |
+| --- | --- | --- | --- |
+| A. “The schedule reports €180,000 in spending attributed to the investment, €60,000 above the original budget; line records remain unreconciled.” | Pass, if the record below resolves to the exact S03 version and scope | Proposed **supported**: it preserves the amount, attribution wording and reconciliation limit | No stronger conclusion added |
+| B. “The third founder caused a €60,000 loss.” | The same provenance record can pass | Proposed **not established / unresolved**: S03 does not state individual causation or economic loss | Which transactions caused a loss, what loss occurred, and who caused it |
+
+A minimal inspectable record for either output is:
+
+```json
+{
+  "source_ref": {
+    "id": "S03",
+    "material_version": "2026-09-16",
+    "scope": "complete English excerpt"
+  },
+  "actor": "fictional-review-agent",
+  "change_type": "heading_rewrite",
+  "transformed_at": "2026-10-02T10:00:00Z",
+  "output_id": "candidate-A-or-B"
+}
+```
+
+This record makes the transformation traceable. It does not make candidate B supported. The reviewer still compares the exact output clause by clause with the exact S03 version.
+
+### Migration check
+
+If a migration moves the S03 citation from candidate A to candidate B, preserve both pairings:
+
+| Stage | Claim–citation pairing | Migration result | Support result |
+| --- | --- | --- | --- |
+| Before | Candidate A → S03 | Recorded | Proposed supported |
+| After | Candidate B → S03 | Citation resolves and may be correctly placed syntactically | Not established: the final claim adds loss and individual causation |
+
+This before/after record shows where the unsupported pairing appeared. It does not convert placement, formatting or reference resolution into a semantic verdict.
+
+The source, transformation record, candidate outputs and proposed judgments are fictional teaching material. No agent transformation or migration checker was executed, and no external reader has tested this exercise.
+
+### Reproduce or challenge this review
+
+1. Confirm the `source_ref` resolves to the exact S03 version and scope.
+2. Compare every material clause in the chosen output with the source passage.
+3. Name the first unsupported clause and the premise it would require.
+4. For a migrated citation, compare the before and after pairings and state whether the problem was introduced by migration or already present.
+
 ## Correction record
 
 Record an accepted correction with its issue/comment link, chosen credit, reason, changed file or commit and verification of the original problem. Mark a proposal **accepted**, **needs revision** or **unresolved**; keep the explanation visible in its thread. Do not count a proposal as a verified improvement before the retained change has been checked.
@@ -142,6 +193,7 @@ Record an accepted correction with its issue/comment link, chosen credit, reason
 | Date | Proposal / chosen credit | Decision and reason | Resulting change / verification |
 | --- | --- | --- | --- |
 | — | No external review recorded in this guide at publication | — | — |
+| 2026-10-02 | Public trail linked from Candidate E; individual wording remains in the original comments | Separate transformation traceability, migration placement and final-output support | S03 transformation and before/after migration exercise above; source/link checks only, no engine or external-reader result |
 | 2026-10-01 | Public trail linked in the worked example; individual wording remains in the original comments | Add a clause-level exercise: resolution cannot silently establish support | Same-passage table and before/after annotations above; source/link checks only, no engine or external-reader result |
 
 This initial row records the publication baseline only. Future reports must inspect the live issue rather than assume it remains unchanged.
