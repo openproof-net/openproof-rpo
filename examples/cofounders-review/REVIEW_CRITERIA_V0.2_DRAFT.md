@@ -2,7 +2,7 @@
 
 **Status:** candidate criteria for the public fictional Cofounders case.  
 **Date:** 23 September 2026.  
-**Revision:** 1 October 2026 — clause-level support and separate review states added after public review.  
+**Revision:** 2 October 2026 — transformed-block and citation-migration review added after public review.  
 **Scope:** public synthetic material only.
 
 This draft records candidate methodological criteria for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
@@ -121,6 +121,36 @@ The rules above are OpenProof's methodological synthesis. The linked contributio
 
 **Current state:** documented proposal with a worked example; not an automated semantic checker, external trial or scientific validation.
 
+## Candidate E — verify transformed blocks and migrated citations at the output
+
+Transformation provenance and evidential support are independent review axes.
+
+For each transformed block, keep an inspectable record of:
+
+- `source_ref`: the original source identity, its expected scope and the exact inspected version;
+- `actor` or `agent_id`: who or what performed the transformation;
+- `change_type`: for example, verbatim extraction, rephrasing, summarisation or restructuring;
+- `transformed_at`: the actual transformation time;
+- the exact output block and its version.
+
+A non-empty, structurally valid record fails the traceability check when `source_ref` names the wrong source or scope. Passing traceability does not establish support. Compare every material clause in the exact output with the exact source version using Candidate D.
+
+When a citation is migrated, preserve both the before and after claim–citation pairings. At the final location, record the relevant passage and locator, a short support reason and the separate support status. This distinguishes:
+
+- a citation attached to the wrong claim during migration;
+- a citation that was already attached to an unsupported claim;
+- a correctly placed citation whose reference resolves but whose final claim still lacks support.
+
+Identifier mapping, formatting, document integrity and citation placement are migration checks. None is a final support verdict.
+
+**Reusable worked example:** [one traceable transformation, two support outcomes](REVIEW_GUIDE.md#traceable-transformation-two-support-outcomes). The proposed judgments are human review annotations prepared for this fictional exercise, not engine output.
+
+**Public review trail:** [four-field transformation provenance](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5886373624), [traceable but unsupported rewrite](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5886569076), [source identity and scope](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5887915790), and [before/after migration review](https://github.com/openproof-net/openproof-rpo/issues/46#issuecomment-5898754156).
+
+The rules above are OpenProof's methodological synthesis. Linked contributions retain their wording, attribution choices and rights.
+
+**Current state:** documented proposal with a worked example; not an implemented transformation log, migration checker, semantic checker or external trial.
+
 ## Review questions
 
 1. Does the paired-conclusion check expose the missing premise?
@@ -129,6 +159,7 @@ The rules above are OpenProof's methodological synthesis. The linked contributio
 4. Does the final decision preserve what is established while keeping authorization, payment, loss, and causation open where evidence is missing?
 5. Can the reader distinguish reference resolution, each clause's support, retraction status and the human decision without a combined score?
 6. Does a rewrite preserve the original wording and make its missing premise visible?
+7. Can a reviewer distinguish transformation traceability, migration placement and final-output support?
 
 ## Change rule
 
