@@ -186,6 +186,54 @@ The source, transformation record, candidate outputs and proposed judgments are 
 3. Name the first unsupported clause and the premise it would require.
 4. For a migrated citation, compare the before and after pairings and state whether the problem was introduced by migration or already present.
 
+## Footnote marker lost at a figure boundary
+
+**Status: untested proposal.** This fixture turns a public review contribution into a reproducible human-review exercise. No external reader, OCR system, layout model or interface was run.
+
+The exact fictional S03 passage in the source guide is:
+
+> Spending attributed to the investment totals €180,000, including €60,000 above the original budget. Supporting records for each line still need to be reconciled.
+
+For this extraction fixture only, suppose a synthetic PDF adds the marker `¹` after `€60,000` and this invented footnote:
+
+> ¹ €25,000 of the overrun was committed in April and paid in June.
+
+The marker and footnote are additions to this exercise. They are not present in version 2026-09-16 of the source guide and do not describe a real document.
+
+### Annotated review-surface sketch
+
+| Page zone | Visible item | Proposed review annotation |
+| --- | --- | --- |
+| Sentence block | `€60,000¹ above the original budget` | Paired marker A at the sentence location |
+| Figure block | Spending chart plus the independent note “Amounts in euros, excluding VAT” | No footnote marker; proximity alone creates no link |
+| Proposed footnote block | `¹ €25,000 … committed in April and paid in June` | Paired marker A only if the block is classified separately from the figure |
+| Grouped exception | “Footnote link unresolved: verify marker and block boundary” | One plain-language item opens both exact locations |
+
+The sketch is a proposed review surface. Its noticeability, readability and duration have not been tested.
+
+### Three documented difficulties
+
+| Difficulty | Unsafe shortcut | Expected human annotation |
+| --- | --- | --- |
+| Marker recognition | Read `€60,000¹` as `€60,0001`, or silently drop the raised mark | Marker match unresolved until the sentence glyph and footnote marker are inspected |
+| Block segmentation | Treat every line inside the detected figure region as a chart note | Block type unresolved until the proposed footnote is separated from the figure and its own note |
+| Attachment | Link the nearest note to the sentence by position | Attachment unresolved unless both the marker match and distinct-block check pass |
+
+**Proposed rule:** if either key check cannot run, disagrees or remains ambiguous, retain the original text, show both locations and route one grouped problem to a person. An unavailable check is not a pass.
+
+**Expected human annotation for the complete fixture:** when the two `¹` marks match and the footnote is verified as a distinct text block, the sentence–footnote attachment may be marked resolved. The invented footnote then supports only the reported timing for that €25,000 subset. It does not establish who approved it, whether the commitment was authorised, whether an economic loss occurred or who caused one.
+
+**Executed behaviour:** none. This repository change documents the rule and fixture; it does not implement or test OCR, segmentation, paired markers, exception navigation or semantic reasoning. The local integrity checker does not verify these judgments.
+
+### Reproduce or challenge this review
+
+1. Compare the unmodified S03 passage above with the explicitly added extraction fixture.
+2. Inspect the sentence marker and the proposed footnote's opening marker as separate observations.
+3. Decide whether the footnote is a distinct text block or part of the figure; do not use proximity as the deciding rule.
+4. Record the attachment as resolved or unresolved with one reason, then state the narrowest proposition the note could support.
+
+**Contribution trail:** [Zaher's public invented case](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) and [OpenProof's retained decision](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5898754553). The project-authored fixture and annotations in this file are within the existing [MIT file scope](../../LICENSING.md); the linked comment is not newly licensed by this statement.
+
 ## Correction record
 
 Record an accepted correction with its issue/comment link, chosen credit, reason, changed file or commit and verification of the original problem. Mark a proposal **accepted**, **needs revision** or **unresolved**; keep the explanation visible in its thread. Do not count a proposal as a verified improvement before the retained change has been checked.
@@ -193,6 +241,7 @@ Record an accepted correction with its issue/comment link, chosen credit, reason
 | Date | Proposal / chosen credit | Decision and reason | Resulting change / verification |
 | --- | --- | --- | --- |
 | — | No external review recorded in this guide at publication | — | — |
+| 2026-10-02 | [Zaher's public #45 footnote case](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) | Require marker matching and distinct-block verification; otherwise keep attachment unresolved | Added the untested S03 extraction fixture above; source/link checks only, no OCR, interface or external-reader result |
 | 2026-10-02 | Public trail linked from Candidate E; individual wording remains in the original comments | Separate transformation traceability, migration placement and final-output support | S03 transformation and before/after migration exercise above; source/link checks only, no engine or external-reader result |
 | 2026-10-01 | Public trail linked in the worked example; individual wording remains in the original comments | Add a clause-level exercise: resolution cannot silently establish support | Same-passage table and before/after annotations above; source/link checks only, no engine or external-reader result |
 
