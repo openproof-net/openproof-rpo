@@ -2,7 +2,7 @@
 
 **Status:** candidate criteria for the public fictional Cofounders case.  
 **Date:** 23 September 2026.  
-**Revision:** 2 October 2026 — transformed-block and citation-migration review added after public review.  
+**Revision:** 2 October 2026 — transformed-block, citation-migration and extraction/footnote review added after public review.  
 **Scope:** public synthetic material only.
 
 This draft records candidate methodological criteria for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
@@ -151,6 +151,31 @@ The rules above are OpenProof's methodological synthesis. Linked contributions r
 
 **Current state:** documented proposal with a worked example; not an implemented transformation log, migration checker, semantic checker or external trial.
 
+## Candidate F — keep extraction ambiguity and footnote attachment unresolved
+
+Extraction quality and evidential support are separate review layers. A sentence and a footnote are linked only when the attachment itself can be inspected.
+
+For each proposed sentence–footnote link, record:
+
+- the exact visible marker in the sentence and its page location;
+- the exact opening marker of the proposed footnote and its page location;
+- whether the proposed footnote is a distinct text block rather than part of a figure, table or independent chart note;
+- the result and reason for both marker matching and block classification.
+
+Visual proximity, shared region membership or a valid `source_ref` does not establish the link. If marker recognition or block segmentation cannot be checked, disagrees or remains ambiguous, keep the attachment **unresolved at the extraction layer**. Show both exact locations, provide one plain-language reason and route the pair to human review. Do not count an unavailable key check as a pass.
+
+Any support judgment that depends on the proposed footnote remains not established until the attachment is resolved. Resolving the attachment establishes only which note belongs to which sentence; it does not establish every downstream inference drawn from the note.
+
+A proposed review surface may use a light paired marker plus one grouped exception that opens both locations. This is an untested interface proposal, not released product behaviour.
+
+**Reusable worked example:** [footnote marker lost at a figure boundary](REVIEW_GUIDE.md#footnote-marker-lost-at-a-figure-boundary). It distinguishes the fictional source text, an added extraction fixture, expected human annotations and behaviour that has not been implemented.
+
+**Public review trail:** [Zaher's invented S03 footnote case and untested display proposal](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) and [OpenProof's retained methodological decision](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5898754553).
+
+The rule above is OpenProof's methodological synthesis. The linked contribution retains its wording, attribution and rights.
+
+**Current state:** documented proposal with a fictional worked fixture; not an extraction engine, layout benchmark, interface implementation, external-reader result or scientific validation.
+
 ## Review questions
 
 1. Does the paired-conclusion check expose the missing premise?
@@ -160,6 +185,7 @@ The rules above are OpenProof's methodological synthesis. Linked contributions r
 5. Can the reader distinguish reference resolution, each clause's support, retraction status and the human decision without a combined score?
 6. Does a rewrite preserve the original wording and make its missing premise visible?
 7. Can a reviewer distinguish transformation traceability, migration placement and final-output support?
+8. Can a reviewer keep a sentence–footnote link unresolved when marker recognition or block segmentation cannot be verified?
 
 ## Change rule
 
