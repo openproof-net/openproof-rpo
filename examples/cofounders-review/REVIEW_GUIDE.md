@@ -238,7 +238,7 @@ The sketch is a proposed review surface. Its noticeability, readability and dura
 
 ## Proposed blind pilot for Candidates A–F
 
-**Status: protocol draft only.** This section specifies a reproducible way to test the candidate criteria before adding another one. No reviewer has been recruited and no pilot has been run.
+**Status: protocol and reviewer pack frozen; pilot not run.** This section specifies a reproducible way to test the candidate criteria before adding another one. No reviewer has been recruited and no pilot has been run.
 
 ### Freeze the fictional pack first
 
@@ -252,6 +252,8 @@ Create one versioned pack of 16 items:
 | 2 | Authority, role or time changes | Different intervals, action types or responsibilities are collapsed |
 | 2 | Transformed output or migrated citation | Traceability or placement is mistaken for final-output support |
 | 2 | Extraction or footnote attachment | An unavailable marker/block check is counted as a pass |
+
+The frozen [reviewer packet v0.1](PILOT_PACK_V0.1.json) contains the 16 items and one blank response record. Its UTF-8 SHA-256 before publication is `fd2a20d43e637f13f43d760dbeaece896331cf274501d0c6d9547c8200d6e44d`. The packet records a SHA-256 commitment to the separately retained expected annotations, so their contents can stay hidden during review and later be checked against the pre-review version. Freezing the packet does not start or authorize a pilot.
 
 Before any reviewer sees the pack, record for every item: exact source and version, claim text, expected reference state, expected clause-level support state, missing premise or context, proposed human annotation and reason. Freeze the file hashes and keep the expected annotations hidden during review.
 

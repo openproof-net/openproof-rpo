@@ -1,0 +1,127 @@
+{
+  "format": "openproof-review-pilot-pack/0.1",
+  "pack_version": "cofounders-a-f-2026-10-03-v0.1",
+  "material_version": "2026-09-16",
+  "status": "frozen_not_run",
+  "language": "en",
+  "scope": "fictional public material only",
+  "source_guide": "SOURCE_GUIDE.md",
+  "criteria": "REVIEW_CRITERIA_V0.2_DRAFT.md",
+  "expected_annotations": {
+    "visibility": "hidden_during_review",
+    "canonical_encoding": "UTF-8 bytes of PILOT_EXPECTED_ANNOTATIONS_V0.1.private.json including its final newline",
+    "sha256": "e9cd9b6c90c92e42653caf3f0ef1844d6468e0e6353989cca9cb3e1f592a7108"
+  },
+  "conditions": {
+    "baseline": "Use each item and the four-field response record only.",
+    "criteria": "Use the same items and response record plus Candidates A-F in REVIEW_CRITERIA_V0.2_DRAFT.md.",
+    "assignment": "One condition per reviewer; expected annotations and other responses remain hidden until individual judgments are frozen."
+  },
+  "response_record": {
+    "item_id": "",
+    "reference_state": "resolved | unresolved | wrong scope | not assessable",
+    "claim_clauses": [
+      {
+        "text": "",
+        "support_state": "supported | not established | contradicted | not assessable",
+        "reason": ""
+      }
+    ],
+    "adverse_or_missing_element": "",
+    "human_decision": "keep | narrow | reject | leave open",
+    "next_evidence_or_check": ""
+  },
+  "items": [
+    {
+      "id": "P01",
+      "sources": [{"ref": "S02", "excerpt": "All three founders approve an investment capped at EUR 120,000. A monthly update must flag any risk of overspending."}],
+      "claim": "All three founders approved an investment capped at EUR 120,000."
+    },
+    {
+      "id": "P02",
+      "sources": [{"ref": "S03", "excerpt": "Spending attributed to the investment totals EUR 180,000, including EUR 60,000 above the original budget. Supporting records for each line still need to be reconciled."}],
+      "claim": "The schedule reports EUR 180,000 attributed to the investment, including EUR 60,000 above the original budget; its line-level records remain unreconciled."
+    },
+    {
+      "id": "P03",
+      "sources": [{"ref": "S05", "excerpt": "We are stopping the project: delays played a part, but our internal change of direction also contributed to this decision."}],
+      "claim": "The customer states that delays and its internal change of direction both contributed to stopping this project."
+    },
+    {
+      "id": "P04",
+      "sources": [{"ref": "S07", "excerpt": "Access and the tracking sheet have been handed over. Two customer files remain incomplete; their contents need completing and receipt must be confirmed."}],
+      "claim": "Access and the tracking sheet were handed over, while two customer files remained incomplete."
+    },
+    {
+      "id": "P05",
+      "sources": [{"ref": "S02", "excerpt": "All three founders approve an investment capped at EUR 120,000. A monthly update must flag any risk of overspending."}],
+      "claim": "Because all three founders approved the investment, none of the losses can be attributed to the third founder."
+    },
+    {
+      "id": "P06",
+      "sources": [{"ref": "S05", "excerpt": "We are stopping the project: delays played a part, but our internal change of direction also contributed to this decision."}],
+      "claim": "The customer message proves that the third founder caused the entire EUR 200,000 in lost revenue."
+    },
+    {
+      "id": "P07",
+      "sources": [{"ref": "S06", "excerpt": "From 5 May, new spending and recruitment require approval from the other two founders. The third retains operational coordination."}],
+      "claim": "From 5 May, the third founder had no operational duties."
+    },
+    {
+      "id": "P08",
+      "sources": [{"ref": "S08", "excerpt": "We claim EUR 480,000: EUR 180,000 in spending, EUR 200,000 in lost revenue and EUR 100,000 for disruption. These losses are attributed to the third founder."}],
+      "claim": "Because the three figures add to EUR 480,000, S08 proves that the third founder owes a EUR 480,000 debt."
+    },
+    {
+      "id": "P09",
+      "sources": [{"ref": "S99", "excerpt": null}],
+      "claim": "S99 confirms that every invoice was reconciled."
+    },
+    {
+      "id": "P10",
+      "sources": [{"ref": "S03", "excerpt": "Spending attributed to the investment totals EUR 180,000, including EUR 60,000 above the original budget. Supporting records for each line still need to be reconciled."}],
+      "claim": "S03 states that the customer stopped the project because of delay."
+    },
+    {
+      "id": "P11",
+      "sources": [
+        {"ref": "S02", "excerpt": "All three founders approve an investment capped at EUR 120,000. A monthly update must flag any risk of overspending."},
+        {"ref": "S06", "excerpt": "From 5 May, new spending and recruitment require approval from the other two founders. The third retains operational coordination."}
+      ],
+      "claim": "S02 and S06 contradict each other because they name different approvers."
+    },
+    {
+      "id": "P12",
+      "sources": [{"ref": "S06", "excerpt": "From 5 May, new spending and recruitment require approval from the other two founders. The third retains operational coordination."}],
+      "claim": "Every payment made after 5 May required a new approval from the other two founders."
+    },
+    {
+      "id": "P13",
+      "sources": [{"ref": "S03", "excerpt": "Spending attributed to the investment totals EUR 180,000, including EUR 60,000 above the original budget. Supporting records for each line still need to be reconciled."}],
+      "transformation": {"type": "rephrasing", "output": "The schedule reports EUR 180,000 attributed to the investment, including a EUR 60,000 overrun; support for each line remains unreconciled."},
+      "claim": "The transformed output preserves the amount, the overrun and the reconciliation limit stated in S03."
+    },
+    {
+      "id": "P14",
+      "sources": [{"ref": "S02", "excerpt": "All three founders approve an investment capped at EUR 120,000. A monthly update must flag any risk of overspending."}],
+      "migration": {
+        "before": {"claim": "The investment was collectively approved up to EUR 120,000.", "source_ref": "S02"},
+        "after": {"claim": "Therefore none of the losses can be attributed to the third founder.", "source_ref": "S02"},
+        "placement_check": "S02 is attached to the intended after-claim."
+      },
+      "claim": "Because the migrated citation resolves and is attached to the intended claim, the after-claim is supported."
+    },
+    {
+      "id": "P15",
+      "sources": [{"ref": "S03-fixture", "excerpt": "Sentence region: EUR 60,000[raised glyph unclear] above the original budget. Nearby proposed note: [opening glyph unclear] EUR 25,000 of the overrun was committed in April and paid in June."}],
+      "extraction_checks": {"sentence_marker": "unavailable", "note_marker": "unavailable", "distinct_text_block": "unavailable", "visual_proximity": "nearby"},
+      "claim": "The nearby note is definitely attached to the EUR 60,000 sentence."
+    },
+    {
+      "id": "P16",
+      "sources": [{"ref": "S03-fixture", "excerpt": "Sentence: EUR 60,000¹ above the original budget. Distinct footnote block: ¹ EUR 25,000 of the overrun was committed in April and paid in June."}],
+      "extraction_checks": {"sentence_marker": "1", "note_marker": "1", "distinct_text_block": "verified", "attachment": "resolved"},
+      "claim": "The resolved footnote proves that the third founder authorised the EUR 25,000 and caused an economic loss."
+    }
+  ]
+}
