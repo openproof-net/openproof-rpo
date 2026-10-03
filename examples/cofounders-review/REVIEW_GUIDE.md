@@ -206,8 +206,10 @@ The marker and footnote are additions to this exercise. They are not present in 
 | --- | --- | --- |
 | Sentence block | `€60,000¹ above the original budget` | Paired marker A at the sentence location |
 | Figure block | Spending chart plus the independent note “Amounts in euros, excluding VAT” | No footnote marker; proximity alone creates no link |
-| Proposed footnote block | `¹ €25,000 … committed in April and paid in June` | Paired marker A only if the block is classified separately from the figure |
+| Proposed footnote block | `¹ €25,000 … committed in April and paid in June` | Paired marker A while the link is unresolved; block classification remains a separate decision |
 | Grouped exception | “Footnote link unresolved: verify marker and block boundary” | One plain-language item opens both exact locations |
+
+The paired marks identify candidate endpoints; they do not assert that the attachment has passed. Keep both visible while the link is unresolved so the reviewer can inspect the sentence and proposed footnote before deciding.
 
 The sketch is a proposed review surface. Its noticeability, readability and duration have not been tested.
 
@@ -241,6 +243,7 @@ Record an accepted correction with its issue/comment link, chosen credit, reason
 | Date | Proposal / chosen credit | Decision and reason | Resulting change / verification |
 | --- | --- | --- | --- |
 | — | No external review recorded in this guide at publication | — | — |
+| 2026-10-03 | [Zaher's follow-up correction](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5963814451) | Show both candidate endpoints before block classification; a paired mark is not a passed link | Corrected the sketch table and explanation above; documentation inspection only |
 | 2026-10-02 | [Zaher's public #45 footnote case](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) | Require marker matching and distinct-block verification; otherwise keep attachment unresolved | Added the untested S03 extraction fixture above; source/link checks only, no OCR, interface or external-reader result |
 | 2026-10-02 | Public trail linked from Candidate E; individual wording remains in the original comments | Separate transformation traceability, migration placement and final-output support | S03 transformation and before/after migration exercise above; source/link checks only, no engine or external-reader result |
 | 2026-10-01 | Public trail linked in the worked example; individual wording remains in the original comments | Add a clause-level exercise: resolution cannot silently establish support | Same-passage table and before/after annotations above; source/link checks only, no engine or external-reader result |
