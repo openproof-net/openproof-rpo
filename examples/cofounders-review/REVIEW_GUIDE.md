@@ -236,6 +236,57 @@ The sketch is a proposed review surface. Its noticeability, readability and dura
 
 **Contribution trail:** [Zaher's public invented case](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) and [OpenProof's retained decision](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5898754553). The project-authored fixture and annotations in this file are within the existing [MIT file scope](../../LICENSING.md); the linked comment is not newly licensed by this statement.
 
+## Proposed blind pilot for Candidates A–F
+
+**Status: protocol draft only.** This section specifies a reproducible way to test the candidate criteria before adding another one. No reviewer has been recruited and no pilot has been run.
+
+### Freeze the fictional pack first
+
+Create one versioned pack of 16 items:
+
+| Items | Case type | Main risk examined |
+| ---: | --- | --- |
+| 4 | Bounded claims supported by the exact passage | A cautious statement is rejected or unnecessarily weakened |
+| 4 | Overreaching claims with a valid reference | Reference resolution is mistaken for support |
+| 2 | Missing reference or wrong source scope | A structural failure is silently repaired or counted as support |
+| 2 | Authority, role or time changes | Different intervals, action types or responsibilities are collapsed |
+| 2 | Transformed output or migrated citation | Traceability or placement is mistaken for final-output support |
+| 2 | Extraction or footnote attachment | An unavailable marker/block check is counted as a pass |
+
+Before any reviewer sees the pack, record for every item: exact source and version, claim text, expected reference state, expected clause-level support state, missing premise or context, proposed human annotation and reason. Freeze the file hashes and keep the expected annotations hidden during review.
+
+### Two conditions
+
+- **Baseline:** source, claim and the existing four-field review record only.
+- **Criteria:** the same material plus Candidates A–F.
+- Use reviewers who did not write the fixtures. Aim for at least two independent reviewers per condition; do not show expected annotations or another person's answer.
+- Assign each reviewer to one condition for this small pilot so prior exposure does not carry the criteria into the baseline.
+- Record each judgment and reason before any discussion or reconciliation.
+
+This design can reveal a directional difference. Its small sample cannot establish scientific validity, population performance or production-engine accuracy.
+
+### Pre-registered readout
+
+The primary descriptive result is:
+
+`overreaching claims accepted as supported / overreaching claims reviewed`
+
+Report it as a raw numerator and denominator for each condition. Also publish:
+
+- cases where reference resolution and support were confused;
+- correct and incorrect use of unresolved states;
+- item-level reviewer disagreement;
+- errors introduced, not only errors prevented, after seeing the criteria;
+- missing responses and deviations from the frozen protocol.
+
+Do not average unlike checks into one score. If the criteria do not reduce overreach acceptance, or create a different error, report that result and revise or retire the relevant rule. Even a favourable difference remains a bounded pilot result.
+
+### Authorization and reuse boundary
+
+Publishing this protocol does not authorize reviewer recruitment, a new campaign or claims of validation. Any live pilot needs agreed scope, consent, credit choices and a named owner before invitations. The fictional pack, blank annotations and raw result table should be reusable under the existing project file licence.
+
+**Contribution trail:** [Daniel Ari Friedman's public analysis and measurement proposal](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5958907120) and [OpenProof's bounded decision](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5966164733). The external theoretical references in that comment are not treated as verified support by this protocol.
+
 ## Correction record
 
 Record an accepted correction with its issue/comment link, chosen credit, reason, changed file or commit and verification of the original problem. Mark a proposal **accepted**, **needs revision** or **unresolved**; keep the explanation visible in its thread. Do not count a proposal as a verified improvement before the retained change has been checked.
@@ -244,6 +295,7 @@ Record an accepted correction with its issue/comment link, chosen credit, reason
 | --- | --- | --- | --- |
 | — | No external review recorded in this guide at publication | — | — |
 | 2026-10-03 | [Zaher's follow-up correction](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5963814451) | Show both candidate endpoints before block classification; a paired mark is not a passed link | Corrected the sketch table and explanation above; documentation inspection only |
+| 2026-10-03 | [Daniel Ari Friedman's public review](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5958907120) | Measure Candidates A–F before adding another criterion; keep the authority/role layer issue-only pending a fixture | Added the proposed blind pilot above; protocol only, no recruitment or result |
 | 2026-10-02 | [Zaher's public #45 footnote case](https://github.com/openproof-net/openproof-rpo/issues/45#issuecomment-5897783582) | Require marker matching and distinct-block verification; otherwise keep attachment unresolved | Added the untested S03 extraction fixture above; source/link checks only, no OCR, interface or external-reader result |
 | 2026-10-02 | Public trail linked from Candidate E; individual wording remains in the original comments | Separate transformation traceability, migration placement and final-output support | S03 transformation and before/after migration exercise above; source/link checks only, no engine or external-reader result |
 | 2026-10-01 | Public trail linked in the worked example; individual wording remains in the original comments | Add a clause-level exercise: resolution cannot silently establish support | Same-passage table and before/after annotations above; source/link checks only, no engine or external-reader result |

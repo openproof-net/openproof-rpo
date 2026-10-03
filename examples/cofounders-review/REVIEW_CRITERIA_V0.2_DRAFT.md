@@ -2,7 +2,7 @@
 
 **Status:** candidate criteria for the public fictional Cofounders case.  
 **Date:** 23 September 2026.  
-**Revision:** 2 October 2026 — transformed-block, citation-migration and extraction/footnote review added after public review.  
+**Revision:** 3 October 2026 — measurement gate added after public review; Candidates A–F remain unvalidated.  
 **Scope:** public synthetic material only.
 
 This draft records candidate methodological criteria for review. It does **not** claim that the criteria have been implemented, run as tests, scientifically validated, or accepted by the provenance reviewer. The submitted [provenance one-pager v0.1](./PROVENANCE_ONE_PAGER_V0.1.md) remains preserved; a separate [v0.2 revised draft](./PROVENANCE_ONE_PAGER_V0.2.md) records later bounded PROV corrections from external technical review.
@@ -176,6 +176,24 @@ The rule above is OpenProof's methodological synthesis. The linked contribution 
 
 **Current state:** documented proposal with a fictional worked fixture; not an extraction engine, layout benchmark, interface implementation, external-reader result or scientific validation.
 
+## Measurement gate before another criterion
+
+Candidates A–F are proposed review methods, not validated controls. Before adding Candidate G, changing the RPO schema or claiming that the criteria improve review, freeze a versioned fictional pilot with:
+
+- 16 claims covering bounded support, overreach despite a valid reference, reference failure, missing context, authority/time roles, transformed output and extraction/footnote attachment;
+- an expected clause-level annotation, exact source version, reason and missing premise written before reviewers see each item;
+- independent reviewers who did not write the fixtures, with expected annotations hidden;
+- separate baseline and criteria conditions, so the review record shows whether access to Candidates A–F changes a decision;
+- individual judgments and reasons recorded before discussion or reconciliation.
+
+The primary descriptive result is the raw count of overreaching claims accepted as supported in each condition. Also report reference-resolution/support confusion, correct use of unresolved states, reviewer disagreement and any new error caused by a criterion. Keep item-level reasons visible. Do not turn a small pilot into model accuracy, scientific validation or a universal benchmark.
+
+The reusable draft protocol is in the [review guide](REVIEW_GUIDE.md#proposed-blind-pilot-for-candidates-af). Publishing that draft does not authorize recruitment; scope, consent and conditions must be agreed before involving reviewers.
+
+**Public review trail:** [Daniel Ari Friedman's authority-state analysis and measurement proposal](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5958907120) and [OpenProof's bounded decision](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5966164733).
+
+**Current state:** proposed measurement gate and protocol only; no pilot, reviewer recruitment, result or validation has occurred.
+
 ## Review questions
 
 1. Does the paired-conclusion check expose the missing premise?
@@ -186,6 +204,7 @@ The rule above is OpenProof's methodological synthesis. The linked contribution 
 6. Does a rewrite preserve the original wording and make its missing premise visible?
 7. Can a reviewer distinguish transformation traceability, migration placement and final-output support?
 8. Can a reviewer keep a sentence–footnote link unresolved when marker recognition or block segmentation cannot be verified?
+9. Before another criterion is added, is there a frozen pilot that can show whether Candidates A–F change reviewer decisions or errors?
 
 ## Change rule
 
