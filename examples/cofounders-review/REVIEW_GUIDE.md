@@ -255,15 +255,22 @@ Create one versioned pack of 16 items:
 
 The frozen [reviewer packet v0.1](PILOT_PACK_V0.1.json) contains the 16 items and one blank response record. Its UTF-8 SHA-256 before publication is `fd2a20d43e637f13f43d760dbeaece896331cf274501d0c6d9547c8200d6e44d`. The packet records a SHA-256 commitment to the separately retained expected annotations, so their contents can stay hidden during review and later be checked against the pre-review version. Freezing the packet does not start or authorize a pilot.
 
+The run manifest's `reviewer_response_form` supersedes the older blank response record embedded in the frozen packet: serve its exact fields, including the human-decision rationale and prior-exposure declaration; when the review aid is present, also serve the validated criteria records without displaying a condition label.
+
+**Administration note — 4 October 2026.** The frozen file stores items in construction-family order, which could cue a reviewer. Do not administer its raw array order or its `P` identifiers. Use the two counterbalanced orders in the [run manifest](PILOT_RUN_MANIFEST_V0.1.json), each administered once per condition, and the neutral presentation IDs in the [raw result table](PILOT_RAW_RESULTS_V0.1.csv). For every item, provide the source excerpts, claim, any item-specific transformation, migration or extraction-check context, and blank response fields for that reviewer's condition; keep administrative IDs and condition fields off the reviewer-facing form, and record prior exposure as a deviation. The [raw result table](PILOT_RAW_RESULTS_V0.1.csv) pre-creates four pseudonymous slots and 64 empty item rows, with one structured `reference_records_json` entry per served source and structured `clause_results_json` for every response, `criteria_records_json` for the bitemporal, inference, retraction, transformation, migration and extraction checks required only in the criteria condition, and append-only `corrections_json` that leaves the submitted primary fields unchanged; it contains no expected judgments. These files prepare administration only and do not recruit reviewers or start the pilot.
+
 Before any reviewer sees the pack, record for every item: exact source and version, claim text, expected reference state, expected clause-level support state, missing premise or context, proposed human annotation and reason. Freeze the file hashes and keep the expected annotations hidden during review.
 
 ### Two conditions
 
-- **Baseline:** source, claim and the existing four-field review record only.
-- **Criteria:** the same material plus Candidates A–F.
+- **Baseline:** source, claim and the common run-manifest response form only.
+- **Review-aid arm:** the same item material and common response form, the additional validated criteria-record fields, plus the exact frozen, link-free [pilot review aid](PILOT_CRITERIA_PAYLOAD_V0.1.md). Do not display a condition label or substitute the linked draft criteria file or a manually edited copy.
 - Use reviewers who did not write the fixtures. Aim for at least two independent reviewers per condition; do not show expected annotations or another person's answer.
+- Before soliciting the first reviewer, commit to a 32-byte random seed. After four eligible consenting reviewers are frozen in consent-time order, use the manifest's deterministic HMAC-SHA-256 Fisher–Yates procedure for B01, B02, C01 and C02; publish the commitment and permutation before delivery, then reveal the seed only after responses are frozen.
 - Assign each reviewer to one condition for this small pilot so prior exposure does not carry the criteria into the baseline.
 - Record each judgment and reason before any discussion or reconciliation.
+- Count a response as submitted only after explicit final submission and validation of the timestamp, reference state, non-empty per-clause JSON records, human decision **and its non-empty rationale** and—only in the criteria condition—the complete structured criteria record. Non-submitted rows may leave result JSON blank; report not-started, in-progress, incomplete and withdrawn rows separately.
+- For P15/P16, use the frozen inline sentence/note locators supplied by the manifest; do not invent page numbers. Validate the nested criteria records, not only their top-level keys. Hash any correction chain with RFC 8785 canonical JSON bytes as specified in the manifest.
 
 This design can reveal a directional difference. Its small sample cannot establish scientific validity, population performance or production-engine accuracy.
 
