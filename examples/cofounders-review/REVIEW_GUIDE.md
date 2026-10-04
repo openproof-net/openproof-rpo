@@ -262,10 +262,12 @@ Before any reviewer sees the pack, record for every item: exact source and versi
 ### Two conditions
 
 - **Baseline:** source, claim and the existing four-field review record only.
-- **Criteria:** the same material plus Candidates A–F.
+- **Criteria:** the same item material plus the exact frozen, link-free [pilot criteria payload](PILOT_CRITERIA_PAYLOAD_V0.1.md). Do not substitute the linked draft criteria file or a manually edited copy.
 - Use reviewers who did not write the fixtures. Aim for at least two independent reviewers per condition; do not show expected annotations or another person's answer.
+- Before revealing either payload, freeze four eligible consenting reviewers in consent-time order, then use a cryptographic Fisher–Yates shuffle of B01, B02, C01 and C02. Record the seed commitment and permutation before delivery; do not swap assignments after exposure.
 - Assign each reviewer to one condition for this small pilot so prior exposure does not carry the criteria into the baseline.
 - Record each judgment and reason before any discussion or reconciliation.
+- Count a response as submitted only after explicit final submission and validation of the timestamp, reference state, non-empty per-clause JSON records and human decision. Report not-started, in-progress, incomplete and withdrawn rows separately.
 
 This design can reveal a directional difference. Its small sample cannot establish scientific validity, population performance or production-engine accuracy.
 
