@@ -1,8 +1,8 @@
-# Pilot criteria payload — v0.1
+# Pilot review aid — v0.1
 
 **Frozen on 4 October 2026. Status: proposed and unvalidated.**
 
-This is the complete link-free reviewer-facing criteria payload for the criteria condition of the fictional cofounders pilot. It contains no item identifiers, expected annotations, worked-example links, contribution trails, repository links or other reviewers' answers. It is a review aid, not an implemented checker, scientific validation, legal opinion or production-engine output.
+This is the complete link-free reviewer-facing review aid for the fictional cofounders pilot. It contains no item identifiers, expected annotations, worked-example links, contribution trails, repository links or other reviewers' answers. It is a review aid, not an implemented checker, scientific validation, legal opinion or production-engine output.
 
 ## Candidate A — paired-conclusion entailment check
 
