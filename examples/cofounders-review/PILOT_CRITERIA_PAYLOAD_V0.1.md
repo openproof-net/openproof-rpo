@@ -94,8 +94,8 @@ Extraction quality and evidential support are separate layers. A sentence and a 
 
 For each proposed sentence–footnote link, record:
 
-- the exact visible marker in the sentence and its page location;
-- the exact opening marker of the proposed footnote and its page location;
+- the exact visible marker in the sentence and its page location, or the frozen inline locator when the source has no page artifact;
+- the exact opening marker of the proposed footnote and its page location, or the frozen inline locator when the source has no page artifact;
 - whether the proposed footnote is a distinct text block rather than part of a figure, table or independent chart note;
 - the result and reason for both marker matching and block classification.
 
