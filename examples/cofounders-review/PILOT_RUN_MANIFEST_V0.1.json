@@ -33,8 +33,8 @@
       "additional_material": [
         {
           "path": "PILOT_CRITERIA_PAYLOAD_V0.1.md",
-          "commit": "68f5dde21c099a6b3966baa8acc5a40dbb776e1e",
-          "blob_sha": "afde36ff5f83c7893aa4137b9c96af9078ec0802",
+          "commit": "b8eec3181f2353d84e1c9e701e8da2f19433df69",
+          "blob_sha": "05e7a091e4b8c8cabb6e90570609dd42ae3e50cf",
           "scope": "complete link-free frozen file",
           "delivery": "serve these exact bytes; do not substitute REVIEW_CRITERIA_V0.2_DRAFT.md or a manually edited copy"
         }
@@ -160,7 +160,7 @@
         "support_state": "supported | not established | contradicted | not assessable",
         "reason": "reviewer's reason"
       },
-      "empty_rule": "Leave blank only while response_status is not_started. A submitted response must contain a non-empty JSON array."
+      "empty_rule": "Leave blank for not_started, in_progress, incomplete or withdrawn rows. A submitted response must contain a non-empty JSON array."
     },
     "response_status": {
       "vocabulary": {
@@ -170,9 +170,23 @@
         "incomplete": "review ended or was abandoned without a complete final submission",
         "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
       },
-      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, and human_decision uses the frozen vocabulary. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp or populated field alone never counts as submission.",
+      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, and human_decision uses the frozen vocabulary. For a criteria-condition row, criteria_records_json must also be a valid JSON object containing every frozen required key; for a baseline row it must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp or populated field alone never counts as submission.",
       "terminal_rule": "submitted is terminal for the primary record. Preserve it; append any later correction with time and reason rather than overwriting the frozen response.",
       "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
+    },
+    "criteria_records_json": {
+      "scope": "Required only for criteria-condition rows at submission; leave blank for baseline and for any non-submitted status.",
+      "encoding": "A JSON object serialized in the CSV cell.",
+      "required_keys": {
+        "bitemporal_context": "{valid_from, valid_to, recorded_at, decision_context_state, reason}; use explicit not_applicable or not_assessed states when needed",
+        "inference_family": "succession | correlation | mechanism | cause | not_applicable | not_assessed",
+        "inference_type": "stated | correlational | inferred-causal | not_applicable | not_assessed",
+        "retraction_status": "{state: not_checked | checked | not_applicable, checked_at_utc, evidence_or_reason}",
+        "transformation_provenance": "{source_ref, actor_or_agent_id, change_type, transformed_at, output_version, traceability_state, reason}; explicit not_applicable/not_assessed object allowed",
+        "migration_review": "{before_pair, after_pair, placement_state, final_support_state, reason}; explicit not_applicable/not_assessed object allowed",
+        "extraction_review": "{sentence_marker, note_marker, distinct_block_state, attachment_state, reason}; explicit not_applicable/not_assessed object allowed"
+      },
+      "omission_rule": "Every key must be present on a submitted criteria row so an omitted check is distinguishable from not applicable, not assessed or an adverse result."
     }
   },
   "allocation": {
@@ -180,7 +194,7 @@
     "method": "After the four-person list is frozen, use an operating-system cryptographic random generator to Fisher-Yates shuffle [B01, B02, C01, C02]. Assign the shuffled slots to the frozen reviewer order. Record the 32-byte seed commitment, resulting permutation, algorithm, owner and timestamp in the private run log before delivering any payload.",
     "balance": "Exactly one reviewer per slot, hence two reviewers per condition. Expertise, availability or expected judgment must not be used to choose a condition.",
     "concealment": "Do not reveal the other condition or administrative slot code before the individual's response is frozen.",
-    "no_swaps": "No post-allocation swap is allowed. A withdrawal before exposure returns only that slot for a replacement selected under the same eligibility rule; a withdrawal or abandonment after exposure stays missing in the assigned slot and is not silently replaced.",
+    "no_swaps": "No post-allocation swap or replacement is allowed in this run, before or after exposure. Any withdrawal or abandonment stays missing in the assigned slot. A later attempt requires a newly versioned run, a newly frozen reviewer list and a fresh allocation record; do not carry a known condition slot to a hand-picked replacement.",
     "reporting": "Reveal the allocation seed only after all individual responses are frozen, if doing so does not expose private reviewer identity. Report any departure from this procedure as a protocol deviation."
   }
 }
