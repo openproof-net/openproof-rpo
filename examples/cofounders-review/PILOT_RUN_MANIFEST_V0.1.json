@@ -171,7 +171,7 @@
         "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
       },
       "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, and human_decision uses the frozen vocabulary. For a criteria-condition row, criteria_records_json must also be a valid JSON object containing every frozen required key; for a baseline row it must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp or populated field alone never counts as submission.",
-      "terminal_rule": "submitted is terminal for the primary record. Preserve it; append any later correction with time and reason rather than overwriting the frozen response.",
+      "terminal_rule": "submitted is terminal for the primary record. Preserve every primary field. If the reviewer later corrects it, append one confirmed object to corrections_json under the frozen correction schema; never overwrite the primary row or an earlier correction object.",
       "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
     },
     "criteria_records_json": {
@@ -184,9 +184,22 @@
         "retraction_status": "{state: not_checked | checked | not_applicable, checked_at_utc, evidence_or_reason}",
         "transformation_provenance": "{source_ref, actor_or_agent_id, change_type, transformed_at, output_version, traceability_state, reason}; explicit not_applicable/not_assessed object allowed",
         "migration_review": "{before_pair, after_pair, placement_state, final_support_state, reason}; explicit not_applicable/not_assessed object allowed",
-        "extraction_review": "{sentence_marker, note_marker, distinct_block_state, attachment_state, reason}; explicit not_applicable/not_assessed object allowed"
+        "extraction_review": "{sentence_marker: {value, page_location}, note_marker: {value, page_location}, marker_match: {state: matched | not_matched | unresolved | not_assessed, reason}, distinct_block: {state, reason}, attachment: {state, reason}}; explicit not_applicable object allowed"
       },
       "omission_rule": "Every key must be present on a submitted criteria row so an omitted check is distinguishable from not applicable, not assessed or an adverse result."
+    },
+    "corrections_json": {
+      "scope": "Optional append-only correction chain for an already submitted row; blank means no correction.",
+      "encoding": "A JSON array serialized in the CSV cell. Append a new object; never edit or delete the primary response fields or an earlier correction object.",
+      "object_fields": {
+        "correction_sequence": "positive integer, consecutive from 1",
+        "corrected_at_utc": "UTC timestamp",
+        "reason": "reviewer-provided correction reason",
+        "reviewer_confirmed": "true only after the reviewer confirms the exact correction",
+        "corrected_response": "complete corrected snapshot containing reference_state, clause_results_json, criteria_records_json when applicable, adverse_or_missing_element, human_decision and next_evidence_or_check",
+        "prior_record_sha256": "SHA-256 of the canonical primary response for sequence 1, otherwise SHA-256 of the preceding correction object"
+      },
+      "analysis_rule": "The frozen primary readout always uses the original submitted fields. Report correction count and corrected descriptive results separately; a correction does not rewrite primary inclusion or status."
     }
   },
   "allocation": {
