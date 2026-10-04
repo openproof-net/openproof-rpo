@@ -33,8 +33,8 @@
       "additional_material": [
         {
           "path": "PILOT_CRITERIA_PAYLOAD_V0.1.md",
-          "commit": "bffa8715a4ad433fe0ecb0b13b53917a95023e19",
-          "blob_sha": "c954e22fbb1127e65cf4bc01a23de4affa85c092",
+          "commit": "7176c772276f87b5015e6e89456981252438a647",
+          "blob_sha": "63555afd8ed6b64fb0c43edcae1c74982181a058",
           "scope": "complete link-free frozen file",
           "delivery": "serve these exact bytes; do not substitute REVIEW_CRITERIA_V0.2_DRAFT.md or a manually edited copy"
         }
@@ -138,8 +138,8 @@
       "frozen_inline_locators (when present)"
     ],
     "include_by_condition": {
-      "baseline": "the frozen blank response record only",
-      "criteria": "the same item payload and response record plus the exact frozen PILOT_CRITERIA_PAYLOAD_V0.1.md bytes"
+      "baseline": "the common reviewer_response_form fields; do not serve the older blank response_record embedded in PILOT_PACK_V0.1.json",
+      "criteria": "the same common reviewer_response_form fields, the criteria_records_json fields, and the exact frozen PILOT_CRITERIA_PAYLOAD_V0.1.md bytes; do not display a condition label"
     },
     "exclude": [
       "item_id",
@@ -171,7 +171,7 @@
         "incomplete": "review ended or was abandoned without a complete final submission",
         "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
       },
-      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, human_decision uses the frozen vocabulary, and human_decision_reason is non-empty. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp, top-level key, null value or populated field alone never counts as submission.",
+      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted; started_at_utc and submitted_at_utc both pass response_schema.timestamps and submission is not earlier than start; prior_exposure_to_candidates uses its frozen non-blank vocabulary and any non-none value has a non-empty protocol_deviation; reference_state uses the frozen vocabulary; clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason; human_decision uses the frozen vocabulary; and human_decision_reason is non-empty. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. Presence, null, malformed timestamps or top-level keys alone never count as submission.",
       "terminal_rule": "submitted is terminal for the primary record. Preserve every primary field. If the reviewer later corrects it, append one confirmed object to corrections_json under the frozen correction schema; never overwrite the primary row or an earlier correction object.",
       "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
     },
@@ -184,7 +184,7 @@
         "inference_type": "stated | correlational | inferred-causal | not_applicable | not_assessed",
         "retraction_status": "{state: not_checked | checked | not_applicable, checked_at_utc, evidence_or_reason}",
         "transformation_provenance": "{source_ref, actor_or_agent_id, change_type, transformed_at, output_version, traceability_state, reason}; explicit not_applicable/not_assessed object allowed",
-        "migration_review": "{before_pair, after_pair, placement_state, final_support_state, reason}; explicit not_applicable/not_assessed object allowed",
+        "migration_review": "{record_state, before_pair: {claim_text, source_ref, passage, locator}, after_pair: {claim_text, source_ref, passage, locator}, placement_state, final_support_state, reason}",
         "extraction_review": "{record_state, sentence_marker: {value, location}, note_marker: {value, location}, marker_match: {state, reason}, distinct_block: {state, reason}, attachment: {state, reason}}"
       },
       "omission_rule": "Every key must be present on a submitted criteria row so an omitted check is distinguishable from not applicable, not assessed or an adverse result.",
@@ -240,8 +240,8 @@
             "reason"
           ],
           "record_state": "recorded | not_applicable | not_assessed",
-          "recorded": "before_pair, after_pair and reason are non-empty; placement_state is resolved | unresolved | wrong_claim; final_support_state uses the clause-support vocabulary",
-          "other": "pair fields are null; placement_state and final_support_state repeat not_applicable or not_assessed; reason is non-empty"
+          "recorded": "before_pair and after_pair are objects containing non-empty claim_text, source_ref, passage and locator; placement_state is resolved | unresolved | wrong_claim; final_support_state uses the clause-support vocabulary; reason is non-empty",
+          "other": "before_pair and after_pair are null; placement_state and final_support_state repeat not_applicable or not_assessed; reason is non-empty"
         },
         "extraction_review": {
           "keys": [
@@ -315,6 +315,22 @@
     "human_decision_reason": {
       "encoding": "non-empty reviewer rationale text",
       "submitted_rule": "required for every submitted baseline or criteria row; it explains the separate keep | narrow | reject | leave open decision and cannot change clause-support states"
+    },
+    "prior_exposure_to_candidates": {
+      "vocabulary": [
+        "none_reported",
+        "candidates_A_F_seen",
+        "answer_key_discussion_seen",
+        "both_seen",
+        "unknown"
+      ],
+      "submitted_rule": "required for every submitted row. Blank is invalid. If value is not none_reported, protocol_deviation must be non-empty and the row remains in the denominator but is reported separately.",
+      "timing": "capture the reviewer's self-report before the first item is shown and reconfirm at final submission"
+    },
+    "timestamps": {
+      "grammar": "exact RFC 3339 UTC form YYYY-MM-DDTHH:mm:ss.SSSZ",
+      "regex": "^[0-9]{4}-(0[1-9]|1[0-2])-([0-2][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\\.[0-9]{3}Z$",
+      "validation": "The value must match the grammar and parse to the same real UTC instant; reject impossible calendar dates. started_at_utc and submitted_at_utc are both required on submitted rows, and submitted_at_utc must be greater than or equal to started_at_utc."
     }
   },
   "allocation": {
@@ -673,5 +689,33 @@
       }
     ]
   },
-  "presentation_id_mapping_control": "This mapping is the frozen authority for the run. PILOT_RAW_RESULTS_V0.1.csv must match it exactly before collection. Any same-version table with a changed slot, position, presentation_id or item_id is invalid; do not migrate responses silently."
+  "presentation_id_mapping_control": "This mapping is the frozen authority for the run. PILOT_RAW_RESULTS_V0.1.csv must match it exactly before collection. Any same-version table with a changed slot, position, presentation_id or item_id is invalid; do not migrate responses silently.",
+  "reviewer_response_form": {
+    "authority": "This exact form supersedes the blank response_record embedded in the frozen pack for this run. The pack remains unchanged for integrity, but its older form must not be served.",
+    "common_visible_fields": {
+      "presentation_id": "opaque ID only; item, slot and condition remain hidden",
+      "reference_state": "resolved | unresolved | wrong scope | not assessable",
+      "claim_clauses": "repeatable objects {clause_text, support_state, reason}; support_state = supported | not established | contradicted | not assessable",
+      "adverse_or_missing_element": "reviewer text",
+      "human_decision": "keep | narrow | reject | leave open",
+      "human_decision_reason": "required reviewer rationale",
+      "next_evidence_or_check": "reviewer text",
+      "prior_exposure_to_candidates": "none_reported | candidates_A_F_seen | answer_key_discussion_seen | both_seen | unknown",
+      "protocol_deviation": "required explanation when prior exposure is not none_reported or another deviation occurred"
+    },
+    "additional_visible_fields_when_review_aid_is_served": {
+      "criteria_records_json": "all seven validated records defined in response_schema.criteria_records_json; present labels without naming a condition"
+    },
+    "captured_by_administration_not_reviewer": [
+      "reviewer_slot",
+      "condition",
+      "item_id",
+      "presentation_position",
+      "started_at_utc",
+      "submitted_at_utc",
+      "response_status",
+      "corrections_json"
+    ],
+    "freeze_action": "The reviewer explicitly finalizes the complete form. Administration validates it, sets submitted_at_utc, then freezes the primary row before discussion or expected annotations are available."
+  }
 }
