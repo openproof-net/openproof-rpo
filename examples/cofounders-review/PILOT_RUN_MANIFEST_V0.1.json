@@ -274,7 +274,7 @@
       "canonicalization": {
         "standard": "RFC 8785 JSON Canonicalization Scheme",
         "encoding": "UTF-8 without BOM; SHA-256 over the exact canonical bytes; lowercase hexadecimal digest",
-        "parsed_json_rule": "Parse clause_results_json into a JSON array. For criteria rows parse criteria_records_json into its JSON object; for the required blank baseline cell use the JSON value null. Never hash the CSV-escaped string representation.",
+        "parsed_json_rule": "Parse reference_records_json and clause_results_json into JSON arrays. For criteria rows parse criteria_records_json into its JSON object; for the required blank baseline cell use the JSON value null. Never hash the CSV-escaped string representation.",
         "primary_snapshot_fields": [
           "protocol_version",
           "reviewer_slot",
@@ -708,7 +708,7 @@
     "authority": "This exact form supersedes the blank response_record embedded in the frozen pack for this run. The pack remains unchanged for integrity, but its older form must not be served.",
     "common_visible_fields": {
       "presentation_id": "opaque ID only; item, slot and condition remain hidden",
-      "reference_state": "resolved | unresolved | wrong scope | not assessable",
+      "reference_state": "resolved | unresolved | wrong scope | not assessable; derived from the per-source reference records by response_schema.reference_records_json.aggregate_reference_state",
       "reference_records": "repeatable per-source objects {source_ref, inspected_version, passage_or_locator, resolution_state, reason}; exactly one record per served source",
       "claim_clauses": "repeatable objects {clause_text, support_state, reason}; support_state = supported | not established | contradicted | not assessable",
       "adverse_or_missing_element": "reviewer text",
