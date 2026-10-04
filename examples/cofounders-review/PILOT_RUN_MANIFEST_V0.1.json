@@ -32,9 +32,11 @@
       ],
       "additional_material": [
         {
-          "path": "REVIEW_CRITERIA_V0.2_DRAFT.md",
-          "commit": "2334b56b8b5b17a5c2bf33bc2d75aed98cd38d28",
-          "scope": "Candidates A-F only"
+          "path": "PILOT_CRITERIA_PAYLOAD_V0.1.md",
+          "commit": "68f5dde21c099a6b3966baa8acc5a40dbb776e1e",
+          "blob_sha": "afde36ff5f83c7893aa4137b9c96af9078ec0802",
+          "scope": "complete link-free frozen file",
+          "delivery": "serve these exact bytes; do not substitute REVIEW_CRITERIA_V0.2_DRAFT.md or a manually edited copy"
         }
       ]
     }
@@ -43,7 +45,7 @@
   "primary_readout": {
     "subset": "Items pre-registered as overreach_valid_reference in the hidden expected-annotation file.",
     "event": "Every object in clause_results_json marked supported and human_decision marked keep.",
-    "report": "accepted events / submitted responses in the subset, separately for baseline and criteria. Report missing responses separately."
+    "report": "accepted events / rows satisfying the submitted_inclusion_rule in the hidden primary subset, separately for baseline and criteria. Report every non-submitted status and protocol deviation separately."
   },
   "secondary_outputs": [
     "reference resolution confused with support",
@@ -136,7 +138,7 @@
     ],
     "include_by_condition": {
       "baseline": "the frozen blank response record only",
-      "criteria": "the same payload and response record plus Candidates A-F"
+      "criteria": "the same item payload and response record plus the exact frozen PILOT_CRITERIA_PAYLOAD_V0.1.md bytes"
     },
     "exclude": [
       "item_id",
@@ -159,6 +161,26 @@
         "reason": "reviewer's reason"
       },
       "empty_rule": "Leave blank only while response_status is not_started. A submitted response must contain a non-empty JSON array."
+    },
+    "response_status": {
+      "vocabulary": {
+        "not_started": "payload not delivered",
+        "in_progress": "payload delivered; no explicit final submission",
+        "submitted": "reviewer explicitly finalized the response and the row passed the completeness rule",
+        "incomplete": "review ended or was abandoned without a complete final submission",
+        "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
+      },
+      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, and human_decision uses the frozen vocabulary. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp or populated field alone never counts as submission.",
+      "terminal_rule": "submitted is terminal for the primary record. Preserve it; append any later correction with time and reason rather than overwriting the frozen response.",
+      "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
     }
+  },
+  "allocation": {
+    "prerequisite": "Before either condition payload is revealed, the owner freezes a list of four eligible consenting reviewers in consent_received_at_utc order. Eligibility, consent, prior exposure and chosen credit are recorded before allocation.",
+    "method": "After the four-person list is frozen, use an operating-system cryptographic random generator to Fisher-Yates shuffle [B01, B02, C01, C02]. Assign the shuffled slots to the frozen reviewer order. Record the 32-byte seed commitment, resulting permutation, algorithm, owner and timestamp in the private run log before delivering any payload.",
+    "balance": "Exactly one reviewer per slot, hence two reviewers per condition. Expertise, availability or expected judgment must not be used to choose a condition.",
+    "concealment": "Do not reveal the other condition or administrative slot code before the individual's response is frozen.",
+    "no_swaps": "No post-allocation swap is allowed. A withdrawal before exposure returns only that slot for a replacement selected under the same eligibility rule; a withdrawal or abandonment after exposure stays missing in the assigned slot and is not silently replaced.",
+    "reporting": "Reveal the allocation seed only after all individual responses are frozen, if doing so does not expose private reviewer identity. Report any departure from this procedure as a protocol deviation."
   }
 }
