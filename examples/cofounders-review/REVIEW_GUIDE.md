@@ -268,6 +268,7 @@ Before any reviewer sees the pack, record for every item: exact source and versi
 - Assign each reviewer to one condition for this small pilot so prior exposure does not carry the criteria into the baseline.
 - Record each judgment and reason before any discussion or reconciliation.
 - Count a response as submitted only after explicit final submission and validation of the timestamp, reference state, non-empty per-clause JSON records, human decision and—only in the criteria condition—the complete structured criteria record. Non-submitted rows may leave result JSON blank; report not-started, in-progress, incomplete and withdrawn rows separately.
+- For P15/P16, use the frozen inline sentence/note locators supplied by the manifest; do not invent page numbers. Validate the nested criteria records, not only their top-level keys. Hash any correction chain with RFC 8785 canonical JSON bytes as specified in the manifest.
 
 This design can reveal a directional difference. Its small sample cannot establish scientific validity, population performance or production-engine accuracy.
 
