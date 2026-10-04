@@ -171,7 +171,7 @@
         "incomplete": "review ended or was abandoned without a complete final submission",
         "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
       },
-      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, and human_decision uses the frozen vocabulary. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp, top-level key, null value or populated field alone never counts as submission.",
+      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted, submitted_at_utc is present, reference_state uses the frozen vocabulary, clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason, human_decision uses the frozen vocabulary, and human_decision_reason is non-empty. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. A timestamp, top-level key, null value or populated field alone never counts as submission.",
       "terminal_rule": "submitted is terminal for the primary record. Preserve every primary field. If the reviewer later corrects it, append one confirmed object to corrections_json under the frozen correction schema; never overwrite the primary row or an earlier correction object.",
       "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
     },
@@ -267,14 +267,14 @@
         "corrected_at_utc": "UTC timestamp",
         "reason": "reviewer-provided correction reason",
         "reviewer_confirmed": "true only after the reviewer confirms the exact correction",
-        "corrected_response": "complete corrected snapshot containing reference_state, clause_results_json, criteria_records_json when applicable, adverse_or_missing_element, human_decision and next_evidence_or_check",
+        "corrected_response": "complete corrected snapshot containing reference_state, clause_results_json, criteria_records_json when applicable, adverse_or_missing_element, human_decision, human_decision_reason and next_evidence_or_check",
         "prior_record_sha256": "SHA-256 of the canonical primary response for sequence 1, otherwise SHA-256 of the preceding correction object"
       },
       "analysis_rule": "The frozen primary readout always uses the original submitted fields. Report correction count and corrected descriptive results separately; a correction does not rewrite primary inclusion or status.",
       "canonicalization": {
         "standard": "RFC 8785 JSON Canonicalization Scheme",
         "encoding": "UTF-8 without BOM; SHA-256 over the exact canonical bytes; lowercase hexadecimal digest",
-        "parsed_json_rule": "Parse clause_results_json and criteria_records_json into JSON values before canonicalization; do not hash their CSV-escaped string representation.",
+        "parsed_json_rule": "Parse clause_results_json into a JSON array. For criteria rows parse criteria_records_json into its JSON object; for the required blank baseline cell use the JSON value null. Never hash the CSV-escaped string representation.",
         "primary_snapshot_fields": [
           "protocol_version",
           "reviewer_slot",
@@ -288,6 +288,7 @@
           "criteria_records_json",
           "adverse_or_missing_element",
           "human_decision",
+          "human_decision_reason",
           "next_evidence_or_check",
           "started_at_utc",
           "submitted_at_utc",
@@ -310,15 +311,26 @@
         ],
         "chain_rule": "For sequence 1, prior_record_sha256 hashes the canonical primary snapshot object. For sequence n>1, it hashes the immediately preceding correction object using correction_object_fields. The current correction object is not included in its own prior hash."
       }
+    },
+    "human_decision_reason": {
+      "encoding": "non-empty reviewer rationale text",
+      "submitted_rule": "required for every submitted baseline or criteria row; it explains the separate keep | narrow | reject | leave open decision and cannot change clause-support states"
     }
   },
   "allocation": {
-    "prerequisite": "Before either condition payload is revealed, the owner freezes a list of four eligible consenting reviewers in consent_received_at_utc order. Eligibility, consent, prior exposure and chosen credit are recorded before allocation.",
-    "method": "After the four-person list is frozen, use an operating-system cryptographic random generator to Fisher-Yates shuffle [B01, B02, C01, C02]. Assign the shuffled slots to the frozen reviewer order. Record the 32-byte seed commitment, resulting permutation, algorithm, owner and timestamp in the private run log before delivering any payload.",
+    "prerequisite": "Before the first reviewer is solicited and before any identity/order list exists, the owner generates exactly 32 random seed bytes from an operating-system CSPRNG and records the lowercase SHA-256 commitment defined below. Before either condition payload is revealed, the owner then freezes four eligible consenting reviewers in consent_received_at_utc order. Eligibility, consent, prior exposure and chosen credit are recorded before allocation.",
+    "method": "Start with slots [B01, B02, C01, C02]. For i = 3, 2, 1, compute HMAC-SHA-256 with key = the exact 32 seed bytes and message = UTF-8 bytes of `openproof-pilot-slot-v0.1:${i}`. Interpret the first 8 digest bytes as one unsigned big-endian integer n, set j = n mod (i + 1), and swap slots[i] with slots[j]. Assign the resulting slot sequence to the frozen reviewer list in consent_received_at_utc order.",
     "balance": "Exactly one reviewer per slot, hence two reviewers per condition. Expertise, availability or expected judgment must not be used to choose a condition.",
     "concealment": "Do not reveal the other condition or administrative slot code before the individual's response is frozen.",
     "no_swaps": "No post-allocation swap or replacement is allowed in this run, before or after exposure. Any withdrawal or abandonment stays missing in the assigned slot. A later attempt requires a newly versioned run, a newly frozen reviewer list and a fresh allocation record; do not carry a known condition slot to a hand-picked replacement.",
-    "reporting": "Reveal the allocation seed only after all individual responses are frozen, if doing so does not expose private reviewer identity. Report any departure from this procedure as a protocol deviation."
+    "reporting": "Publish the commitment, frozen algorithm and resulting permutation before payload delivery without exposing reviewer identities. Reveal the seed only after all individual responses are frozen. Report any departure as a protocol deviation.",
+    "seed_commitment": {
+      "bytes": "exactly 32 raw seed bytes",
+      "function": "SHA-256 over those 32 bytes only",
+      "encoding": "lowercase hexadecimal, exactly 64 ASCII characters",
+      "timing": "record the commitment before the first reviewer is solicited; never regenerate or select a seed after reviewer identities or order are known",
+      "reveal": "after all individual responses are frozen, reveal the 64-character lowercase hexadecimal seed so another person can recompute the commitment and permutation"
+    }
   },
   "frozen_inline_locators": {
     "P15": {
@@ -330,5 +342,336 @@
       "note_location": "sources[0].excerpt::Distinct footnote block"
     },
     "administration": "Expose the two locator strings with the corresponding P15/P16 payload in both conditions. They identify exact inline segments in the frozen excerpt; they are not page numbers and do not assert marker matching or attachment."
-  }
+  },
+  "presentation_id_mapping": {
+    "B01": [
+      {
+        "position": 1,
+        "presentation_id": "R-2DADV",
+        "item_id": "P01"
+      },
+      {
+        "position": 2,
+        "presentation_id": "R-2Z39L",
+        "item_id": "P09"
+      },
+      {
+        "position": 3,
+        "presentation_id": "R-2LU5B",
+        "item_id": "P06"
+      },
+      {
+        "position": 4,
+        "presentation_id": "R-28LZ2",
+        "item_id": "P11"
+      },
+      {
+        "position": 5,
+        "presentation_id": "R-2UDUR",
+        "item_id": "P13"
+      },
+      {
+        "position": 6,
+        "presentation_id": "R-2G6QG",
+        "item_id": "P07"
+      },
+      {
+        "position": 7,
+        "presentation_id": "R-23XL7",
+        "item_id": "P04"
+      },
+      {
+        "position": 8,
+        "presentation_id": "R-2PQFW",
+        "item_id": "P15"
+      },
+      {
+        "position": 9,
+        "presentation_id": "R-2BHBM",
+        "item_id": "P05"
+      },
+      {
+        "position": 10,
+        "presentation_id": "R-2XA7C",
+        "item_id": "P10"
+      },
+      {
+        "position": 11,
+        "presentation_id": "R-2K333",
+        "item_id": "P12"
+      },
+      {
+        "position": 12,
+        "presentation_id": "R-26TWS",
+        "item_id": "P03"
+      },
+      {
+        "position": 13,
+        "presentation_id": "R-2SLSH",
+        "item_id": "P14"
+      },
+      {
+        "position": 14,
+        "presentation_id": "R-2EDN8",
+        "item_id": "P08"
+      },
+      {
+        "position": 15,
+        "presentation_id": "R-226HX",
+        "item_id": "P02"
+      },
+      {
+        "position": 16,
+        "presentation_id": "R-2MXDN",
+        "item_id": "P16"
+      }
+    ],
+    "B02": [
+      {
+        "position": 1,
+        "presentation_id": "R-29Q9D",
+        "item_id": "P08"
+      },
+      {
+        "position": 2,
+        "presentation_id": "R-2VH54",
+        "item_id": "P02"
+      },
+      {
+        "position": 3,
+        "presentation_id": "R-2H9YT",
+        "item_id": "P11"
+      },
+      {
+        "position": 4,
+        "presentation_id": "R-252UJ",
+        "item_id": "P16"
+      },
+      {
+        "position": 5,
+        "presentation_id": "R-2QTQ9",
+        "item_id": "P04"
+      },
+      {
+        "position": 6,
+        "presentation_id": "R-2CLKY",
+        "item_id": "P06"
+      },
+      {
+        "position": 7,
+        "presentation_id": "R-2YDFP",
+        "item_id": "P13"
+      },
+      {
+        "position": 8,
+        "presentation_id": "R-2L6BE",
+        "item_id": "P09"
+      },
+      {
+        "position": 9,
+        "presentation_id": "R-27X75",
+        "item_id": "P05"
+      },
+      {
+        "position": 10,
+        "presentation_id": "R-2TQ2U",
+        "item_id": "P12"
+      },
+      {
+        "position": 11,
+        "presentation_id": "R-2FGWK",
+        "item_id": "P15"
+      },
+      {
+        "position": 12,
+        "presentation_id": "R-239SA",
+        "item_id": "P03"
+      },
+      {
+        "position": 13,
+        "presentation_id": "R-2P2MZ",
+        "item_id": "P14"
+      },
+      {
+        "position": 14,
+        "presentation_id": "R-2ATHQ",
+        "item_id": "P07"
+      },
+      {
+        "position": 15,
+        "presentation_id": "R-2WLDF",
+        "item_id": "P10"
+      },
+      {
+        "position": 16,
+        "presentation_id": "R-2JD96",
+        "item_id": "P01"
+      }
+    ],
+    "C01": [
+      {
+        "position": 1,
+        "presentation_id": "R-2664V",
+        "item_id": "P03"
+      },
+      {
+        "position": 2,
+        "presentation_id": "R-2RWYL",
+        "item_id": "P12"
+      },
+      {
+        "position": 3,
+        "presentation_id": "R-2DPUB",
+        "item_id": "P09"
+      },
+      {
+        "position": 4,
+        "presentation_id": "R-2ZGQ2",
+        "item_id": "P01"
+      },
+      {
+        "position": 5,
+        "presentation_id": "R-2M9KR",
+        "item_id": "P15"
+      },
+      {
+        "position": 6,
+        "presentation_id": "R-292FG",
+        "item_id": "P08"
+      },
+      {
+        "position": 7,
+        "presentation_id": "R-2UTB7",
+        "item_id": "P10"
+      },
+      {
+        "position": 8,
+        "presentation_id": "R-2GL6W",
+        "item_id": "P07"
+      },
+      {
+        "position": 9,
+        "presentation_id": "R-24D2M",
+        "item_id": "P14"
+      },
+      {
+        "position": 10,
+        "presentation_id": "R-2Q5WC",
+        "item_id": "P04"
+      },
+      {
+        "position": 11,
+        "presentation_id": "R-2BWS3",
+        "item_id": "P13"
+      },
+      {
+        "position": 12,
+        "presentation_id": "R-2XPMS",
+        "item_id": "P06"
+      },
+      {
+        "position": 13,
+        "presentation_id": "R-2KGHH",
+        "item_id": "P16"
+      },
+      {
+        "position": 14,
+        "presentation_id": "R-279D8",
+        "item_id": "P05"
+      },
+      {
+        "position": 15,
+        "presentation_id": "R-2T28X",
+        "item_id": "P11"
+      },
+      {
+        "position": 16,
+        "presentation_id": "R-2ET4N",
+        "item_id": "P02"
+      }
+    ],
+    "C02": [
+      {
+        "position": 1,
+        "presentation_id": "R-22KYD",
+        "item_id": "P06"
+      },
+      {
+        "position": 2,
+        "presentation_id": "R-2NCU4",
+        "item_id": "P11"
+      },
+      {
+        "position": 3,
+        "presentation_id": "R-2A5PT",
+        "item_id": "P04"
+      },
+      {
+        "position": 4,
+        "presentation_id": "R-2VWKJ",
+        "item_id": "P05"
+      },
+      {
+        "position": 5,
+        "presentation_id": "R-2HPF9",
+        "item_id": "P02"
+      },
+      {
+        "position": 6,
+        "presentation_id": "R-25GAY",
+        "item_id": "P15"
+      },
+      {
+        "position": 7,
+        "presentation_id": "R-2R96P",
+        "item_id": "P08"
+      },
+      {
+        "position": 8,
+        "presentation_id": "R-2D22E",
+        "item_id": "P12"
+      },
+      {
+        "position": 9,
+        "presentation_id": "R-2YSW5",
+        "item_id": "P03"
+      },
+      {
+        "position": 10,
+        "presentation_id": "R-2LKRU",
+        "item_id": "P09"
+      },
+      {
+        "position": 11,
+        "presentation_id": "R-28CMK",
+        "item_id": "P13"
+      },
+      {
+        "position": 12,
+        "presentation_id": "R-2U5HA",
+        "item_id": "P01"
+      },
+      {
+        "position": 13,
+        "presentation_id": "R-2FWCZ",
+        "item_id": "P16"
+      },
+      {
+        "position": 14,
+        "presentation_id": "R-23P8Q",
+        "item_id": "P07"
+      },
+      {
+        "position": 15,
+        "presentation_id": "R-2PG4F",
+        "item_id": "P14"
+      },
+      {
+        "position": 16,
+        "presentation_id": "R-2B8Y6",
+        "item_id": "P10"
+      }
+    ]
+  },
+  "presentation_id_mapping_control": "This mapping is the frozen authority for the run. PILOT_RAW_RESULTS_V0.1.csv must match it exactly before collection. Any same-version table with a changed slot, position, presentation_id or item_id is invalid; do not migrate responses silently."
 }
