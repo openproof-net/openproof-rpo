@@ -24,6 +24,8 @@ docs/examples/public-demo/rpo-fr.json
 examples/cofounders-review/README.md
 examples/cofounders-review/REVIEW_GUIDE.md
 examples/cofounders-review/PILOT_PACK_V0.1.json
+examples/cofounders-review/PILOT_RAW_RESULTS_V0.1.csv
+examples/cofounders-review/PILOT_RUN_MANIFEST_V0.1.json
 examples/public-demo/README.md
 examples/public-demo/rpo-en.json
 examples/public-demo/rpo-en.sha256
