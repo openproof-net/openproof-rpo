@@ -41,7 +41,7 @@ Tag each reviewed claim as:
 - `correlational`;
 - `inferred-causal`.
 
-An `inferred-causal` claim defaults to **unsupported** until the record contains the premises and evidence required for the causal step. Accurate citations do not establish that step by themselves.
+An `inferred-causal` claim defaults to **not established** until the record contains the premises and evidence required for the causal step. Accurate citations do not establish that step by themselves.
 
 ## Candidate D — inspect each clause before accepting the proposition
 
