@@ -15,7 +15,7 @@
     "finding": "The frozen pack stores items in construction-family order. Showing its raw array order or P-identifiers could reveal a pattern.",
     "control": "For every item, administer the source excerpts, claim and any item-specific transformation, migration or extraction-check context, plus a blank response record. Use the slot order below and an opaque presentation_id from the raw-result table; do not expose item_id, reviewer_slot or condition fields on the reviewer-facing form. Do not show repository links, pack metadata, condition labels, hashes, this manifest, expected annotations or another response until submission.",
     "residual_risk": "All material is public. Record prior exposure and any browsing of Candidates A-F or the answer-key discussion as a protocol deviation; do not claim blinding when exposure is known or unknown.",
-    "order_control": "P01 and P05 are separated by at least seven positions in every slot. Other items sharing an exact single-source excerpt are not adjacent."
+    "order_control": "Two counterbalanced item orders are crossed between conditions: B01 and C01 use the same item order, and B02 and C02 use the same item order. P01 and P05 are separated by at least seven positions in both orders. Other items sharing an exact single-source excerpt are not adjacent."
   },
   "conditions": {
     "baseline": {
@@ -92,40 +92,40 @@
       "P01"
     ],
     "C01": [
-      "P03",
-      "P12",
-      "P09",
       "P01",
-      "P15",
-      "P08",
-      "P10",
-      "P07",
-      "P14",
-      "P04",
-      "P13",
+      "P09",
       "P06",
-      "P16",
-      "P05",
       "P11",
-      "P02"
+      "P13",
+      "P07",
+      "P04",
+      "P15",
+      "P05",
+      "P10",
+      "P12",
+      "P03",
+      "P14",
+      "P08",
+      "P02",
+      "P16"
     ],
     "C02": [
-      "P06",
-      "P11",
-      "P04",
-      "P05",
-      "P02",
-      "P15",
       "P08",
-      "P12",
-      "P03",
-      "P09",
-      "P13",
-      "P01",
+      "P02",
+      "P11",
       "P16",
-      "P07",
+      "P04",
+      "P06",
+      "P13",
+      "P09",
+      "P05",
+      "P12",
+      "P15",
+      "P03",
       "P14",
-      "P10"
+      "P07",
+      "P10",
+      "P01"
     ]
   },
   "reviewer_payload": {
@@ -171,7 +171,7 @@
         "incomplete": "review ended or was abandoned without a complete final submission",
         "withdrawn": "consent withdrawn before final submission; retain only the permitted status/audit record"
       },
-      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted; started_at_utc and submitted_at_utc both pass response_schema.timestamps and submission is not earlier than start; prior_exposure_to_candidates uses its frozen non-blank vocabulary and any non-none value has a non-empty protocol_deviation; reference_state uses the frozen vocabulary; clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason; human_decision uses the frozen vocabulary; and human_decision_reason is non-empty. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. Presence, null, malformed timestamps or top-level keys alone never count as submission.",
+      "submitted_inclusion_rule": "A row counts as submitted only when response_status is exactly submitted; started_at_utc and submitted_at_utc both pass response_schema.timestamps and submission is not earlier than start; prior_exposure_to_candidates uses its frozen non-blank vocabulary and any non-none value has a non-empty protocol_deviation; reference_records_json validates exactly one record per served source and reference_state equals its frozen aggregate; clause_results_json is a non-empty valid JSON array whose every object has non-empty clause_text, allowed support_state and reason; human_decision uses the frozen vocabulary; and human_decision_reason is non-empty. For a criteria-condition row, criteria_records_json must validate every top-level key, nested shape, enum and conditional requirement in nested_validation; P15/P16 must use the frozen inline locators. For a baseline row criteria_records_json must be blank. If any check fails, set response_status to incomplete and exclude it from the primary denominator. Presence, null, malformed timestamps or top-level keys alone never count as submission.",
       "terminal_rule": "submitted is terminal for the primary record. Preserve every primary field. If the reviewer later corrects it, append one confirmed object to corrections_json under the frozen correction schema; never overwrite the primary row or an earlier correction object.",
       "missing_rule": "not_started, in_progress, incomplete and withdrawn rows do not enter the submitted-response denominator; report their counts separately by condition and status. A submitted row with a protocol deviation remains in the denominator and is also reported as a deviation."
     },
@@ -200,7 +200,7 @@
             "reason"
           ],
           "record_state": "recorded | not_applicable | not_assessed",
-          "recorded": "valid_from, valid_to and recorded_at are non-empty inspected values; decision_context_state is linked or unresolved; reason is non-empty",
+          "recorded": "valid_from, valid_to and recorded_at are each either a non-empty inspected value copied from the served material or null when absent; never invent a missing date. decision_context_state is linked or unresolved; reason is non-empty. Partial or entirely missing chronology may be recorded as unresolved.",
           "other": "date fields are null; decision_context_state repeats not_applicable or not_assessed; reason is non-empty"
         },
         "inference_family": "exactly one of succession | correlation | mechanism | cause | not_applicable | not_assessed",
@@ -212,7 +212,7 @@
             "evidence_or_reason"
           ],
           "state": "not_checked | checked | not_applicable",
-          "checked": "checked_at_utc and evidence_or_reason are non-empty",
+          "checked": "checked_at_utc must match response_schema.timestamps.grammar, parse to the same real UTC instant and use millisecond precision; evidence_or_reason is non-empty",
           "other": "checked_at_utc is null and evidence_or_reason is non-empty"
         },
         "transformation_provenance": {
@@ -267,7 +267,7 @@
         "corrected_at_utc": "UTC timestamp",
         "reason": "reviewer-provided correction reason",
         "reviewer_confirmed": "true only after the reviewer confirms the exact correction",
-        "corrected_response": "complete corrected snapshot containing reference_state, clause_results_json, criteria_records_json when applicable, adverse_or_missing_element, human_decision, human_decision_reason and next_evidence_or_check",
+        "corrected_response": "complete corrected snapshot containing reference_state, reference_records_json, clause_results_json, criteria_records_json when applicable, adverse_or_missing_element, human_decision, human_decision_reason and next_evidence_or_check",
         "prior_record_sha256": "SHA-256 of the canonical primary response for sequence 1, otherwise SHA-256 of the preceding correction object"
       },
       "analysis_rule": "The frozen primary readout always uses the original submitted fields. Report correction count and corrected descriptive results separately; a correction does not rewrite primary inclusion or status.",
@@ -284,6 +284,7 @@
           "presentation_position",
           "response_status",
           "reference_state",
+          "reference_records_json",
           "clause_results_json",
           "criteria_records_json",
           "adverse_or_missing_element",
@@ -331,6 +332,19 @@
       "grammar": "exact RFC 3339 UTC form YYYY-MM-DDTHH:mm:ss.SSSZ",
       "regex": "^[0-9]{4}-(0[1-9]|1[0-2])-([0-2][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\\.[0-9]{3}Z$",
       "validation": "The value must match the grammar and parse to the same real UTC instant; reject impossible calendar dates. started_at_utc and submitted_at_utc are both required on submitted rows, and submitted_at_utc must be greater than or equal to started_at_utc."
+    },
+    "reference_records_json": {
+      "scope": "Required for every submitted row in both conditions.",
+      "encoding": "A JSON array serialized in the CSV cell, with exactly one object for every source served with the item, in served-source order.",
+      "object_fields": {
+        "source_ref": "exact source_ref shown in the served item payload",
+        "inspected_version": "exact version or date shown with that source; use the literal not_provided only when the served source supplies none",
+        "passage_or_locator": "exact passage or locator the reviewer inspected",
+        "resolution_state": "resolved | unresolved | wrong scope | not assessable",
+        "reason": "non-empty reviewer reason"
+      },
+      "validation": "The array is non-empty; its length and source_ref sequence exactly match the served sources; every object contains all five fields; inspected_version and passage_or_locator are non-empty strings; resolution_state uses the frozen vocabulary; reason is non-empty. Do not collapse a multi-source item into one record.",
+      "aggregate_reference_state": "Derive the scalar reference_state from these records: wrong scope if any record is wrong scope; otherwise unresolved if any is unresolved; otherwise not assessable if any is not assessable; otherwise resolved only when every record is resolved. A manually conflicting scalar makes the row incomplete."
     }
   },
   "allocation": {
@@ -528,149 +542,149 @@
       {
         "position": 1,
         "presentation_id": "R-2664V",
-        "item_id": "P03"
+        "item_id": "P01"
       },
       {
         "position": 2,
         "presentation_id": "R-2RWYL",
-        "item_id": "P12"
+        "item_id": "P09"
       },
       {
         "position": 3,
         "presentation_id": "R-2DPUB",
-        "item_id": "P09"
+        "item_id": "P06"
       },
       {
         "position": 4,
         "presentation_id": "R-2ZGQ2",
-        "item_id": "P01"
+        "item_id": "P11"
       },
       {
         "position": 5,
         "presentation_id": "R-2M9KR",
-        "item_id": "P15"
+        "item_id": "P13"
       },
       {
         "position": 6,
         "presentation_id": "R-292FG",
-        "item_id": "P08"
+        "item_id": "P07"
       },
       {
         "position": 7,
         "presentation_id": "R-2UTB7",
-        "item_id": "P10"
+        "item_id": "P04"
       },
       {
         "position": 8,
         "presentation_id": "R-2GL6W",
-        "item_id": "P07"
+        "item_id": "P15"
       },
       {
         "position": 9,
         "presentation_id": "R-24D2M",
-        "item_id": "P14"
+        "item_id": "P05"
       },
       {
         "position": 10,
         "presentation_id": "R-2Q5WC",
-        "item_id": "P04"
+        "item_id": "P10"
       },
       {
         "position": 11,
         "presentation_id": "R-2BWS3",
-        "item_id": "P13"
+        "item_id": "P12"
       },
       {
         "position": 12,
         "presentation_id": "R-2XPMS",
-        "item_id": "P06"
+        "item_id": "P03"
       },
       {
         "position": 13,
         "presentation_id": "R-2KGHH",
-        "item_id": "P16"
+        "item_id": "P14"
       },
       {
         "position": 14,
         "presentation_id": "R-279D8",
-        "item_id": "P05"
+        "item_id": "P08"
       },
       {
         "position": 15,
         "presentation_id": "R-2T28X",
-        "item_id": "P11"
+        "item_id": "P02"
       },
       {
         "position": 16,
         "presentation_id": "R-2ET4N",
-        "item_id": "P02"
+        "item_id": "P16"
       }
     ],
     "C02": [
       {
         "position": 1,
         "presentation_id": "R-22KYD",
-        "item_id": "P06"
+        "item_id": "P08"
       },
       {
         "position": 2,
         "presentation_id": "R-2NCU4",
-        "item_id": "P11"
+        "item_id": "P02"
       },
       {
         "position": 3,
         "presentation_id": "R-2A5PT",
-        "item_id": "P04"
+        "item_id": "P11"
       },
       {
         "position": 4,
         "presentation_id": "R-2VWKJ",
-        "item_id": "P05"
+        "item_id": "P16"
       },
       {
         "position": 5,
         "presentation_id": "R-2HPF9",
-        "item_id": "P02"
+        "item_id": "P04"
       },
       {
         "position": 6,
         "presentation_id": "R-25GAY",
-        "item_id": "P15"
+        "item_id": "P06"
       },
       {
         "position": 7,
         "presentation_id": "R-2R96P",
-        "item_id": "P08"
+        "item_id": "P13"
       },
       {
         "position": 8,
         "presentation_id": "R-2D22E",
-        "item_id": "P12"
+        "item_id": "P09"
       },
       {
         "position": 9,
         "presentation_id": "R-2YSW5",
-        "item_id": "P03"
+        "item_id": "P05"
       },
       {
         "position": 10,
         "presentation_id": "R-2LKRU",
-        "item_id": "P09"
+        "item_id": "P12"
       },
       {
         "position": 11,
         "presentation_id": "R-28CMK",
-        "item_id": "P13"
+        "item_id": "P15"
       },
       {
         "position": 12,
         "presentation_id": "R-2U5HA",
-        "item_id": "P01"
+        "item_id": "P03"
       },
       {
         "position": 13,
         "presentation_id": "R-2FWCZ",
-        "item_id": "P16"
+        "item_id": "P14"
       },
       {
         "position": 14,
@@ -680,12 +694,12 @@
       {
         "position": 15,
         "presentation_id": "R-2PG4F",
-        "item_id": "P14"
+        "item_id": "P10"
       },
       {
         "position": 16,
         "presentation_id": "R-2B8Y6",
-        "item_id": "P10"
+        "item_id": "P01"
       }
     ]
   },
@@ -695,6 +709,7 @@
     "common_visible_fields": {
       "presentation_id": "opaque ID only; item, slot and condition remain hidden",
       "reference_state": "resolved | unresolved | wrong scope | not assessable",
+      "reference_records": "repeatable per-source objects {source_ref, inspected_version, passage_or_locator, resolution_state, reason}; exactly one record per served source",
       "claim_clauses": "repeatable objects {clause_text, support_state, reason}; support_state = supported | not established | contradicted | not assessable",
       "adverse_or_missing_element": "reviewer text",
       "human_decision": "keep | narrow | reject | leave open",
