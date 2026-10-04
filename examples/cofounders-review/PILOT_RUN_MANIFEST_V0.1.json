@@ -339,11 +339,11 @@
       "object_fields": {
         "source_ref": "exact source_ref shown in the served item payload",
         "inspected_version": "exact version or date shown with that source; use the literal not_provided only when the served source supplies none",
-        "passage_or_locator": "exact passage or locator the reviewer inspected",
+        "passage_or_locator": "exact passage or locator the reviewer inspected; JSON null only when the served source itself contains neither a passage nor a locator",
         "resolution_state": "resolved | unresolved | wrong scope | not assessable",
         "reason": "non-empty reviewer reason"
       },
-      "validation": "The array is non-empty; its length and source_ref sequence exactly match the served sources; every object contains all five fields; inspected_version and passage_or_locator are non-empty strings; resolution_state uses the frozen vocabulary; reason is non-empty. Do not collapse a multi-source item into one record.",
+      "validation": "The array is non-empty; its length and source_ref sequence exactly match the served sources; every object contains all five fields; inspected_version is a non-empty string. passage_or_locator is a non-empty string when the served source contains a passage or locator. It may be JSON null only when the served source contains neither; in that case resolution_state must be unresolved or not assessable and reason must identify the missing reference. Empty strings are invalid. resolution_state uses the frozen vocabulary; reason is non-empty. Do not collapse a multi-source item into one record or invent missing evidence.",
       "aggregate_reference_state": "Derive the scalar reference_state from these records: wrong scope if any record is wrong scope; otherwise unresolved if any is unresolved; otherwise not assessable if any is not assessable; otherwise resolved only when every record is resolved. A manually conflicting scalar makes the row incomplete."
     }
   },
