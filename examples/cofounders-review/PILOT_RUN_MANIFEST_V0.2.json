@@ -164,7 +164,7 @@
       "expected annotations",
       "other responses"
     ],
-    "presentation_id": "Use the opaque per-row ID in PILOT_RAW_RESULTS_V0.1.csv. IDs share one neutral prefix and contain no slot or condition code. Keep the administrative mapping off the reviewer-facing form."
+    "presentation_id": "Use the opaque per-row ID in PILOT_RAW_RESULTS_V0.2.csv. IDs share one neutral prefix and contain no slot or condition code. Keep the administrative mapping off the reviewer-facing form."
   },
   "response_schema": {
     "item_row": "One row per reviewer-slot/item presentation.",
