@@ -238,7 +238,7 @@ The sketch is a proposed review surface. Its noticeability, readability and dura
 
 ## Proposed blind pilot for Candidates A–F
 
-**Status: protocol and reviewer pack frozen; pilot not run.** This section specifies a reproducible way to test the candidate criteria before adding another one. No reviewer has been recruited and no pilot has been run.
+**Status: corrected administration protocol and reviewer pack frozen; pilot not run.** This section specifies a reproducible way to test the candidate criteria before adding another one. No reviewer has been recruited and no pilot has been run.
 
 ### Freeze the fictional pack first
 
@@ -257,9 +257,19 @@ The frozen [reviewer packet v0.1](PILOT_PACK_V0.1.json) contains the 16 items an
 
 The run manifest's `reviewer_response_form` supersedes the older blank response record embedded in the frozen packet: serve its exact fields, including the human-decision rationale and prior-exposure declaration; when the review aid is present, also serve the validated criteria records without displaying a condition label.
 
-**Administration note — 4 October 2026.** The frozen file stores items in construction-family order, which could cue a reviewer. Do not administer its raw array order or its `P` identifiers. Use the two counterbalanced orders in the [run manifest](PILOT_RUN_MANIFEST_V0.1.json), each administered once per condition, and the neutral presentation IDs in the [raw result table](PILOT_RAW_RESULTS_V0.1.csv). For every item, provide the source excerpts, claim, any item-specific transformation, migration or extraction-check context, and blank response fields for that reviewer's condition; keep administrative IDs and condition fields off the reviewer-facing form, and record prior exposure as a deviation. The [raw result table](PILOT_RAW_RESULTS_V0.1.csv) pre-creates four pseudonymous slots and 64 empty item rows, with one structured `reference_records_json` entry per served source and structured `clause_results_json` for every response, `criteria_records_json` for the bitemporal, inference, retraction, transformation, migration and extraction checks required only in the criteria condition, and append-only `corrections_json` that leaves the submitted primary fields unchanged; it contains no expected judgments. These files prepare administration only and do not recruit reviewers or start the pilot.
+**Administration note — 4 October 2026.** The frozen file stores items in construction-family order, which could cue a reviewer. Do not administer its raw array order or its `P` identifiers. Use the two counterbalanced orders in the [run manifest](PILOT_RUN_MANIFEST_V0.2.json), each administered once per condition, and the neutral presentation IDs in the [raw result table](PILOT_RAW_RESULTS_V0.2.csv). For every item, provide the source excerpts, claim, any item-specific transformation, migration or extraction-check context, and blank response fields for that reviewer's condition; keep administrative IDs and condition fields off the reviewer-facing form, and record prior exposure as a deviation. The [raw result table](PILOT_RAW_RESULTS_V0.2.csv) pre-creates four pseudonymous slots and 64 empty item rows, with one structured `reference_records_json` entry per served source and structured `clause_results_json` for every response, `criteria_records_json` for the bitemporal, inference, retraction, transformation, migration and extraction checks required only in the criteria condition, and append-only `corrections_json` that leaves the submitted primary fields unchanged; it contains no expected judgments. These files prepare administration only and do not recruit reviewers or start the pilot.
 
 Before any reviewer sees the pack, record for every item: exact source and version, claim text, expected reference state, expected clause-level support state, missing premise or context, proposed human annotation and reason. Freeze the file hashes and keep the expected annotations hidden during review.
+
+### Expected-annotation custody and scoring handoff
+
+The private file `PILOT_EXPECTED_ANNOTATIONS_V0.1.private.json` is the only scoring authority for the registered readout. Its custodian is **OpenProof / Gersende**. Before the first reviewer is solicited, record one named authorised independent scorer and the existing private channel that will carry the exact file bytes.
+
+Only after every individual response is frozen may the custodian send those exact bytes to the scorer. Before opening the file for scoring, the scorer recomputes its SHA-256, including the final newline, and records the received time and whether it matches `e9cd9b6c90c92e42653caf3f0ef1844d6468e0e6353989cca9cb3e1f592a7108`. Participants must not receive the annotations before their responses are frozen.
+
+If the file is unavailable, arrives early or has a different digest, halt the registered readout. Do not reconstruct labels, infer the primary subset or substitute a file after seeing responses. A matching digest proves byte identity only; it does not validate the annotations. The complete machine-readable rule is in the [v0.2 run manifest](PILOT_RUN_MANIFEST_V0.2.json).
+
+**External correction:** this handoff closes the reproducibility gap identified by [Daniel Ari Friedman](https://github.com/openproof-net/openproof-rpo/issues/44#issuecomment-5982810632).
 
 ### Two conditions
 
